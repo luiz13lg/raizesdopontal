@@ -1,0 +1,161 @@
+html, body, .capa{
+	height: 100%;
+	overflow: auto;
+}
+
+body{
+	/*background: linear-gradient(50deg, #FF4500, #98FB98);*/
+	background-attachment: fixed;
+	font-family: Helvetica, Arial, sans-serif;
+	overflow-x: hidden;
+	background: white;
+}
+
+.img-logo{
+	height: 40px;
+	width: 132px;
+	display: block;
+	background: url('../imagens/tree.png') no-repeat;
+	background-size: contain;
+	color: transparent;
+}
+
+nav.navbar-transparente{
+	padding: 15px 0px;
+	background: rgba(255,255,255, 1);
+	border: none;
+	font-family: 'Paytone One', sans-serif;
+	font-size: 20px;
+}
+
+.navbar-brand{
+	padding: 5px 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a, footer .nav a{
+	color: #669D1C;
+	/*color: #32CD32;*/
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, footer .nav a:hover{
+	/*color: #008000;*/
+	color: #B22222;
+	background: none;
+}
+
+
+.capa{
+	display: table;
+	width: 100%;
+	position: absolute;
+	background-image: url('../imagens/legumes-capa.jpg');
+	background-size: cover;
+}
+
+.texto-capa{
+	text-align: center;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.rodape{
+	/*background: #228B22;*/
+	background: #B22222;
+	height: 50px;
+}
+
+.rodape h4{
+	font-size: 15px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	text-shadow: 1.5px 1.5px black;
+	text-align: center;	
+}
+
+.card{
+	 background-color: #f0f0f0;
+}
+.card .card-title{
+	color: #7c9c37;
+}
+.card .card-text{
+	font-size: 14px;
+	border:none;
+}
+
+#projeto{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.parallax { 
+
+    background-image: url('../imagens/legumes-capa.jpg');
+
+  
+    height: 100%;
+    width: 100%;
+
+    position: absolute; 
+
+   
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#parallaxBar h1{
+	margin-top: 30vh;
+	text-align: center;
+} 
+
+#parallaxBar{
+    height:750px;
+    background-color:#004c82;
+    background: url('../imagens/legumes-capa.jpg') 50% 0 fixed;
+    position: relative; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+	font-size: 100px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	font-family: 'Paytone One', sans-serif;
+	color: white;
+	text-shadow: 5px 2px black;
+	text-align: center;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	font-family: 'Paytone One', sans-serif;
+	color: #B22222;
+	text-shadow: 5px 2px black;
+	text-align: center;
+}
+
+h3{
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	font-family: 'Montserrat', sans-serif;
+	/*color: #8B8989;*/
+	color: #89726E;
+	/*text-shadow: 5px 2px black;*/
+	text-align: center;	
+}
