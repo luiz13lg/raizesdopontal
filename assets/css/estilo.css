@@ -64,13 +64,15 @@ nav.navbar-transparente{
 	/*background: #228B22;*/
 	background: #B22222;
 	height: 50px;
+	display: block;
+	width: 100%
 }
 
 .rodape h4{
 	font-size: 15px;
 	font-weight: 900;
 	letter-spacing: -0.05em;
-	margin-bottom: 50px;
+	padding-top: 17px;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
 	text-shadow: 1.5px 1.5px black;
