@@ -37,8 +37,8 @@
 
 			<div class="collapse navbar-collapse" id="barra-navegacao">
           		<ul class="nav navbar-nav navbar-right">
-            		<!--<li><a href="#">Receitas</a></li>
-            		<li><a href="#">Sugestões</a></li>-->
+            		<!--<li><a href="#">Receitas</a></li>-->
+            		<li><a href="<?php echo base_url('Sugestoes/')?>">Sugestões</a></li>
             		<li><a href="#">Galeria</a></li>
             		<li><a href="<?php echo base_url('Login/')?>">Entrar</a></li>
           		</ul>
