@@ -18,7 +18,7 @@
 	</form>
 
 		<div  >
-				<a href="#">Primeiro acesso</a>
+				<a href="<?php echo base_url('Cliente/cadastro')?>">Primeiro acesso</a>
 		</div>
 		<div  >
 				<a href="#">Esqueceu sua senha</a>
