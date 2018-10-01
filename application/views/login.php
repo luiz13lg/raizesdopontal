@@ -4,7 +4,7 @@
 <div class="container-fluid">
 	<h2> Login </h2>
 </div>
-<div class="container">
+<div class="container" style="width:60%">
 	<form  method="post" action="<?= base_url()?>Login/autentication">
 	  <div class="form-group">
 	    <label for="exampleInputEmail1">Email</label>
@@ -17,11 +17,11 @@
 	  <button type="submit" class="btn btn-success">Entrar</button>
 	</form>
 
-		<div  >
-				<a href="<?php echo base_url('Cliente/cadastro')?>">Primeiro acesso</a>
+		<div style="margin-top: 10px;">
+			<a href="<?php echo base_url('Cliente/cadastro')?>">Primeiro acesso</a>
 		</div>
-		<div  >
-				<a href="#">Esqueceu sua senha</a>
+		<div style="margin-top: 5px;margin-bottom: 20px;">
+			<a href="#">Esqueceu sua senha</a>
 		</div>
 
 </div>

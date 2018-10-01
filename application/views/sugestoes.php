@@ -1,7 +1,7 @@
 	<div class="container">
 		<h3> Gambiarra </h3>
 	</div>
-	<div class="container">
+	<div class="container" style="width:60%">
 		<h2> Sugestoes </h2>
 		<form  method="post" action="<?= base_url()?>Login/autentication">
 		  <div class="form-group">
