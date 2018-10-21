@@ -43,15 +43,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="./assets/imagens/3.jpg" alt="batatinha" style="width:100%;">
+        <img src="../assets/imagens/3.jpg" alt="batatinha" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="./assets/imagens/5.jpg" alt="tomatito" style="width:100%;">
+        <img src="../assets/imagens/5.jpg" alt="tomatito" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="./assets/imagens/6.jpg" alt="alfacinho" style="width:100%;">
+        <img src="../assets/imagens/6.jpg" alt="alfacinho" style="width:100%;">
       </div>
     </div>
 
