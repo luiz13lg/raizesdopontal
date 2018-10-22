@@ -9,12 +9,12 @@
         <div class="col-md-12">
           <div class="row text-center">
             <div class="col-sm-6 form-group">
-              <input class="form-control" id="produtonome" name="produtonome" placeholder="Nome do Produto" type="text" required>
+              <input class="form-control" id="nome" name="nome" placeholder="Nome do Produto" type="text" required>
             </div>
           </div>
           <div class="row text-center">
             <div class="col-sm-6 form-group">
-              <input type="number" name="quantidadeproduto" class="form-control" id="quantidadeproduto" placeholder="Quantidade" min = '1' required>
+              <input type="number" name="quantidade" class="form-control" id="quantidade" placeholder="Quantidade" min = '1' required>
             </div>
           </div>
           <div class="row">
@@ -25,12 +25,12 @@
               <input type="radio" name="unidademedida" value="Unitario" id="unidademedida"> Unidade <br>
             </div> -->
             <div class="col-sm-6 form-group">
-              <input type="text" name="valor" class="form-control" id="valorproduto" placeholder="Valor">
+              <input type="text" name="valor" class="form-control" id="valor" placeholder="Valor">
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12 form-group">
-              <input type="text" name="descricao" class="form-control" id="descricaoproduto" placeholder="Descrição" required>
+              <input type="text" name="descricao" class="form-control" id="descricao" placeholder="Descrição" required>
             </div>
           </div>
           <div class="row">
