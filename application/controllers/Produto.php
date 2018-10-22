@@ -11,5 +11,19 @@ class Produto extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function novo(){
+		$pruduto = array(
+			"nomeProduto"=> $this->input->post('nome'),
+			"qtdProduto"=>$this->input->post('quantidade'),
+			"valorProduto"=> $this->input->post('valor'),
+			"descricaoProduto"=>$this->input->post('descricao')
+		);
+
+
+		$this->load->view('cadastroproduto');
+		$this->load->model('produto_model');
+		$this->produto_model->salvar($produto);
+	}
+
 
 }
