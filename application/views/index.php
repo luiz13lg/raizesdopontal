@@ -38,20 +38,30 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="../assets/imagens/3.jpg" alt="batatinha" style="width:100%;">
+        <img src="../assets/imagens/foto1.jpeg" alt="foto 1" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="../assets/imagens/5.jpg" alt="tomatito" style="width:100%;">
+        <img src="../assets/imagens/foto12.jpeg" alt="foto 2" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="../assets/imagens/6.jpg" alt="alfacinho" style="width:100%;">
+        <img src="../assets/imagens/foto3.jpeg" alt="foto 3" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="../assets/imagens/foto4.jpeg" alt="foto 4" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="../assets/imagens/foto5.jpeg" alt="foto 5" style="width:100%;">
       </div>
     </div>
 

@@ -23,6 +23,7 @@
 <body><!-- <body style="height: 500vh"> -->
 	<nav class="nav navbar-fixed-top navbar-inverse navbar-transparente">
 		<div class="container">
+		
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#barra-navegacao">
 					<span class="sr-only">Alternar navegação</span>

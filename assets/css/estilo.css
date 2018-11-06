@@ -48,7 +48,7 @@ nav.navbar-transparente{
 	display: table;
 	width: 100%;
 	position: absolute;
-	background-image: url('../imagens/legumes-capa.jpg');
+	background-image: url('../imagens/foto6.jpeg');
 	background-size: cover;
 }
 
@@ -97,7 +97,7 @@ nav.navbar-transparente{
 
 .parallax { 
 
-    background-image: url('../imagens/legumes-capa.jpg');
+    background-image: url('../imagens/foto6.jpeg');
 
   
     height: 100%;
@@ -121,7 +121,7 @@ nav.navbar-transparente{
 #parallaxBar{
     height:750px;
     background-color:#004c82;
-    background: url('../imagens/legumes-capa.jpg') 50% 0 fixed;
+    background: url('../imagens/foto6.jpeg') 50% 0 fixed;
     position: relative; 
     background-attachment: fixed;
     background-position: center;
