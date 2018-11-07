@@ -13,10 +13,10 @@ class Receita extends CI_Controller {
 		
 		$receita = array(
 			"nomeReceita" => $this->input->post("nome"),
-			"descricaoReceita" => $this->input->post("descricao")
+			"descricaoReceita" => $this->input->post("descricao"),
 			"ingredienteReceita"->$this->input->post("ingredientes"),
 			"fotoReceita" => $this->input->post("nome")
-		)
+		);
 		
 		$this->load->view('headerIndex');
 		$this->load->view('cadastroreceita');
