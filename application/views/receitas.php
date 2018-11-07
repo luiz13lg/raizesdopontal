@@ -78,7 +78,7 @@
     </section>
 
     <div class="text-center">
-    	<a href="<?php echo base_url('Receita/nova')?>" class="btn btn-success">Adicionar nova</a>
+    	<a href="<?php echo base_url('Receita/cadastrar')?>" class="btn btn-success">Cadastrar Receita</a>
     </div>
 
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -106,5 +106,3 @@ $(document).ready(function(){
    });  
 });
 </script>
-
-</html>
