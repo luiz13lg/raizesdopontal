@@ -17,13 +17,13 @@
 	<section  id="projeto" class="row">
 		<div class="container">
 			<div class="row">
-				<div class ="col-md-6" style="margin-top: 9vh">
+				<div class ="col-md-4" style="margin-top: 9vh">
 					<h2>Sobre o Projeto</h2>
 				</div>
-				<div class="col-md-6">
-					<h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quaerat inventore dolorem iure, eum in nostrum vero reprehenderit recusandae cupiditate ad quod voluptatum distinctio sapiente perferendis ex. Nostrum, veniam, enim!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aperiam at suscipit consectetur rem possimus culpa adipisci similique sint, soluta ea quos, tempore totam aut ducimus impedit nisi aliquid eius.</p>
-					</h3>
+				<div class="col-md-8">
+					<h4>
+						<p>O Projeto Cestas Agroecológicas e Solidárias “Raízes do Pontal”, surge com o objetivo de contribuir com a comercialização da produção de alimentos realizada por famílias camponesas do assentamento Gleba XV de Novembro, nos municípios de Euclides da Cunha Paulista e Rosana, no extremo Oeste do estado de São Paulo. O projeto é fruto da parceria entre pesquisadores do CEGeT (Centro de Estudos de Geografia do Trabalho) e o Setor de Produção do MST (Movimento dos Trabalhadores Rurais Sem Terra). A Cestas são comercializadas na UNESP/FCT, sendo o público consumidor a comunidades acadêmica (docentes, alunos e servidores) e comunidade local (morados da cidade de Presidente Prudente). As Cestas são de dois tipos: a grande, com cerca de 12 a 15 variedades de alimentos, aproximadamente 12kg de peso e são adquiridas pelo valor unitário de R$50,00; e a pequena, compostas de 9 a 12 variedades de alimentos, aproximadamente 7kg, a um custo de R$30,00. As Cestas são comercializadas quinzenalmente, e a divulgação do projeto é feita em página de duas redes sociais na internet e através do telefone.</p>
+					</h4>
 				</div>
 			</div>
 		</div>

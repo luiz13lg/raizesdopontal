@@ -162,6 +162,17 @@ h3{
 	text-align: center;	
 }
 
+h4{
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+    /*color: #8B8989;*/
+    color: #89726E;
+    /*text-shadow: 5px 2px black;*/
+    text-align: center; 
+}
+
 /*	Galeria		
 
 .gallery-title
