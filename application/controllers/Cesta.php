@@ -11,7 +11,6 @@ class Cesta extends CI_Controller{
 	public function nova(){
 		$cesta = array(
             "tipoCesta" => $this->input->post("descricao"),
-            "valorCesta"=>$this->input->post("valor"),
             "frutasCesta"=>$this->input->post("frutas"),
             "legumesCesta"=>$this->input->post("legumes"),
             "raizesCesta"=>$this->input->post("raizes"),
@@ -23,7 +22,7 @@ class Cesta extends CI_Controller{
 		$this->load->view('footer');
 
 		$this->load->model('cesta_model');
-		$this->receita_model->salvar($cesta);
+		$this->cesta_model->salvar($cesta);
 	}
 }
 ?>
