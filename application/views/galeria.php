@@ -7,63 +7,63 @@
             <h2 class="gallery-title">Galeria</h2>
         </div>
 
-        <div align="center">
+        <!-- <div align="center">
             <button class="btn btn-default filter-button" data-filter="all">All</button>
             <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
             <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
             <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
             <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
-        </div>
+        </div> -->
         <br/>
 
 
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto1.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto2.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto3.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto4.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto5.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto13.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto7.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto8.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto9.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto10.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto11.jpeg" class="img-responsive">
             </div>
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                <img src="../assets/imagens/foto12.jpeg" class="img-responsive">
             </div>
         </div>
     </div>
