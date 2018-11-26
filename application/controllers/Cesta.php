@@ -10,9 +10,12 @@ class Cesta extends CI_Controller{
 
 	public function nova(){
 		$cesta = array(
-			"tipoCesta" => $this->input->post("descricao"),
-            "valorCesta"=>$this->input->post("ingrediente"),
-            "produtosCesta"=>$this->input->post("ingrediente")
+            "tipoCesta" => $this->input->post("descricao"),
+            "valorCesta"=>$this->input->post("valor"),
+            "frutasCesta"=>$this->input->post("frutas"),
+            "legumesCesta"=>$this->input->post("legumes"),
+            "raizesCesta"=>$this->input->post("raizes"),
+            "verdurasCesta"=>$this->input->post("verduras")
 		);
 
 		$this->load->view('headerIndex');
