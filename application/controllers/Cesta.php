@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Cestas extends CI_Controller{
+class Cesta extends CI_Controller{
     public function cadastro(){
 		$this->load->view('headerIndex');
-		$this->load->view('cesta');
+		$this->load->view('cadastroCesta');
 		$this->load->view('footer');
 	}
 
