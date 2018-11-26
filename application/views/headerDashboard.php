@@ -46,13 +46,13 @@
     	<div class="sidebar-wrapper">
 
             <ul class="nav">
-                <li class="active">
+                <!-- <li class="active">
                     <a href="dashboard.html">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
-                </li>
-                <li>
+                </li> -->
+                <!-- <li>
                     <a href="user.html">
                         <i class="pe-7s-user"></i>
                         <p>User Profile</p>
@@ -63,13 +63,20 @@
                         <i class="pe-7s-note2"></i>
                         <p>Table List</p>
                     </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="notifications.html">
+                    <a href="<?= base_url()?>Cesta/cadastro">
                         <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
+                        <p>Cadastro Cesta</p>
                     </a>
                 </li>
+                <li>
+                    <a href="<?= base_url()?>Produto/">
+                        <i class="pe-7s-bell"></i>
+                        <p>Cadastro Produto</p>
+                    </a>
+                </li>
+
 				<!-- <li class="active-pro">
                     <a href="upgrade.html">
                         <i class="pe-7s-rocket"></i>
