@@ -4,9 +4,18 @@
 class Admin extends CI_Controller {
 
 	public function index(){
+		$this->load->model('produto_model');
+		$resultado = $this->produto_model->teste();
+		$this->load->model('cesta_model');
+		$resultadoCesta = $this->cesta_model->teste();
+
+
 		$this->load->view('headerDashboard');
-		$this->load->view('indexDashboard');
+		$this->load->view('indexDashboard', array('resultado' => $resultado, 'resultadoCesta' => $resultadoCesta));
 		$this->load->view('footerDashboard');
+
 	}
+
+
 
 }

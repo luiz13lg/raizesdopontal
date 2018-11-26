@@ -19,13 +19,16 @@ class Produto extends CI_Controller {
 			"descricaoProduto"=>$this->input->post('descricao')
 		);
 
-		$this->load->view('headerIndex');
-		$this->load->view('cadastroproduto');
-		$this->load->view('footer');
+		// $this->load->view('headerIndex');
+		// $this->load->view('cadastroproduto');
+		// $this->load->view('footer');
+
+
 		
 		$this->load->model('produto_model');
 		$this->produto_model->salvar($produto);
 	}
 
+	
 
 }

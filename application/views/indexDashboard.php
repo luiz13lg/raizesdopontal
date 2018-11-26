@@ -8,7 +8,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                   <!--  <a class="navbar-brand" href="#">Dashboard</a> -->
+                    <!-- <a class="navbar-brand" href="#">Raizes do Pontal</a> -->
                 </div>
                 <div class="collapse navbar-collapse">
                    <!--  <ul class="nav navbar-nav navbar-left">
@@ -78,10 +78,40 @@
             </div>
         </nav>
 
-
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 style="color: #B22222">Cestas</h3>
+                            <!-- Tabela de Funcionarios ativos -->
+                            <table class="table table-striped table-condensed table-datatable">
+                              <thead>
+                              <tr>
+                                  <th>Valor</th>
+                                  <th>Legumes</th> 
+                                  <th>Frutas</th>
+                                  <th>Verduras</th>
+                                  <th>Raizes</th>                                          
+                              </tr>
+                              </thead> 
+                              <tbody>
+                                  <?php foreach ($resultadoCesta as $key => $value) { ?>
+                                  <tr>
+                                  <td><?= $value->valorCesta ?></td>
+                                  <td><?= $value->legumesCesta ?></td>
+                                  <td><?= $value->frutasCesta ?></td>
+                                  <td><?= $value->verdurasCesta ?></td>
+                                  <td><?= $value->raizesCesta ?></td>
+                                  </tr>
+                                  <?php } ?>
+
+                              </tbody>  
+                            </table>
+                        </div>
+                     </div>
+
                     <div class="card">
                     <div class="card-body">
                         <h3 style="color: #B22222">Produtos</h3>
@@ -94,13 +124,30 @@
                               <th>Quantidade</th>
                               <th>Preço</th>                                          
                           </tr>
-                          </thead>   
+                          </thead> 
+                          <tbody>
+                              <?php foreach ($resultado as $key => $value) { ?>
+                              <tr>
+                              <td><?= $value->nomeProduto ?></td>
+                              <td><?= $value->descricaoProduto ?></td>
+                              <td><?= $value->qtdProduto ?></td>
+                              <td><?= $value->valorProduto ?></td>
+                              </tr>
+                              <?php } ?>
+
+                          </tbody>  
                         </table>
                     </div>
                 </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            escreverTabela(){
+
+            }
+        </script>
 
         <!--   Core JS Files   -->
     <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
