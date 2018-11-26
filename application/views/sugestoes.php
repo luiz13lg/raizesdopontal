@@ -2,7 +2,7 @@
 		<h3> Gambiarra </h3>
 	</div>
 	<div class="container" style="width:60%">
-		<h2> Sugestoes </h2>
+		<h2> Sugestões </h2>
 		<form  method="post" action="<?= base_url()?>Login/autentication">
 		  <div class="form-group">
 		    <label for="exampleInputEmail1">Email</label>
