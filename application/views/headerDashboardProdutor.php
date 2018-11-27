@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="../assets/imagens/tree.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Administrador</title>
+	<title>Produtor</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -47,7 +47,7 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="<?= base_url()?>Admin/index">
+                    <a href="<?= base_url()?>Produtor/index">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
@@ -64,14 +64,14 @@
                         <p>Table List</p>
                     </a>
                 </li> -->
-                <li>
+                <!-- <li>
                     <a href="<?= base_url()?>Admin/cadastroCesta">
                         <i class="pe-7s-bell"></i>
                         <p>Cadastro Cesta</p>
                     </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="<?= base_url()?>Admin/cadastroProduto">
+                    <a href="<?= base_url()?>Produtor/cadastroProduto">
                         <i class="pe-7s-bell"></i>
                         <p>Cadastro Produto</p>
                     </a>

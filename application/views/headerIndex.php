@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Raizes do Pontal</title>
-	<link rel="icon" href='./assets/imagens/tree.png'>
+	<link rel="icon" href='../assets/imagens/tree.png'>
 
 	<link href="<?= base_url("assets/css/bootstrap.min.css")?>" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?= base_url("assets/css/estilo.css")?>">
@@ -42,6 +42,8 @@
             		<li><a href="<?php echo base_url('Sugestoes/')?>">Sugestões</a></li>
             		<li><a href="<?php echo base_url('Galeria/')?>">Galeria</a></li>
             		<li><a href="<?php echo base_url('Receita/receitas')?>">Receita</a></li>
+            		<li><a href="<?php echo base_url('Produto/produtos')?>">Produtos</a></li>
+            		<li><a href="<?php echo base_url('Cesta/cestas')?>">Cestas</a></li>
             		<li><a href="<?php echo base_url('Login/')?>">Entrar</a></li>
           		</ul>
         	</div>

@@ -102,8 +102,7 @@
                                   <th>Legumes</th> 
                                   <th>Frutas</th>
                                   <th>Verduras</th>
-                                  <th>Raizes</th>
-                                  <th></th>                           
+                                  <th>Raizes</th>                         
                               </tr>
                               </thead> 
                               <tbody>
@@ -115,7 +114,6 @@
                                   <td><?= $value->frutasCesta ?></td>
                                   <td><?= $value->verdurasCesta ?></td>
                                   <td><?= $value->raizesCesta ?></td>
-                                  <td><button class="btn btn-sm btn-primary" <?php echo base_url('Welcome/') ?>>Editar </button></td>
                                   </tr>
                                   <?php } ?>
 

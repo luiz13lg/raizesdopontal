@@ -51,11 +51,11 @@
                         <li><p style="margin: 20px 10px 10px 3px"><?php echo "Bem vindo, ".$logado."!" ?></p></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
+                        <!-- <li>
                            <a href="">
                                <p>Account</p>
                             </a>
-                        </li>
+                        </li> -->
                         <!-- <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <p>
@@ -88,10 +88,10 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    
+                    <h3 style="color: #B22222">Cestas Disponíveis</h3>
                     <div class="card">
                         <div class="card-body">
-                            <h3 style="color: #B22222">Cestas</h3>
+                            
                             <!-- Tabela de Funcionarios ativos -->
                             <table class="table table-striped table-condensed table-datatable">
                               <thead>
@@ -123,10 +123,11 @@
                             </table>
                         </div>
                      </div>
-
+                    
+                    <h3 style="color: #B22222">Produtos que serão vendidos</h3>
                     <div class="card">
                     <div class="card-body">
-                        <h3 style="color: #B22222">Produtos</h3>
+                        
                         <!-- Tabela de Funcionarios ativos -->
                         <table class="table table-striped table-condensed table-datatable">
                           <thead>

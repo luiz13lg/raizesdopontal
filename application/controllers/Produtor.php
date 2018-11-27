@@ -47,5 +47,11 @@
             $this->load->view('footerDashboard');
 
         }
+
+        public function cadastroProduto(){
+            $this->load->view('headerDashboardProdutor');
+            $this->load->view('cadastroProduto');
+            $this->load->view('footerDashboard');
+        }
     }
 ?>
