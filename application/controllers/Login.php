@@ -12,7 +12,7 @@ class Login extends CI_Controller {
 	public function autentication(){
 		$usuario = array(
 			'emailUsuario' => $this->input->post("email"),
-			'senhaUsuario' => $this->input->post("senha"),	//colocar segurança!
+			'senhaUsuario' => md5($this->input->post("senha")),
 		);
 
 		$this->load->model('cliente_model');
@@ -27,15 +27,15 @@ class Login extends CI_Controller {
 			$_SESSION['logado'] = TRUE;
 			$_SESSION['tipoUsuario'] = $resultado[0]->tipoUsuario;
 
-			if($newdata['tipoUsuario'] == 0){	//admin
+			if($_SESSION['tipoUsuario'] == 0){	//admin
 				// $this->session->set_userdata($newdata);
 				redirect(base_url('Admin/index'));
 			}
-			if($newdata['tipoUsuario'] == 1){	//produtor
-				redirect(base_url('Receita/cadastrar'));
+			if($_SESSION['tipoUsuario'] == 1){	//produtor
+				redirect(base_url('Produtor/index'));
 			}
-			if($newdata['tipoUsuario'] == 3){	//cliente
-				redirect(base_url('Receita/cadastrar'));
+			if($_SESSION['tipoUsuario'] == 2){	//cliente
+				redirect(base_url('Cliente/index'));
 			}
 		}
 	}

@@ -11,9 +11,10 @@ class Cliente extends CI_Controller {
 
 	public function salvar(){
 		$usuario = array(
-			"nomeCliente"=> $this->input->post('nome'),
-			"emailCliente"=> $this->input->post("email"),
-			"senhaCliente"=> md5($this->input->post("senha")),
+			"nomeUsuario"=> $this->input->post('nome'),
+			"emailUsuario"=> $this->input->post("email"),
+			"senhaUsuario"=> md5($this->input->post("senha")),
+			"tipoUsuario"=> 2,
 			"telCliente"=> $this->input->post('telefone'),
 			"ruaCliente"=> $this->input->post('rua'),
 			"nrCliente"=> $this->input->post('numero'),

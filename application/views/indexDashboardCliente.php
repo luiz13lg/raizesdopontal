@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
     $logado = $_SESSION['nome'];
-?> -->
+?>
 
 <body>
 

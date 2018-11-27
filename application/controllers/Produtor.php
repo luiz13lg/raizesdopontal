@@ -16,7 +16,10 @@
                 "nrProdutor" => $this->input->post("numero"),
                 "bairroProdutor" => $this->input->post("bairro"),
                 "cidadeProdutor" => $this->input->post("cidade"),
-                "estadoProdutor" => $this->input->post("estado")
+                "estadoProdutor" => $this->input->post("estado"),
+                "tipoUsuario" => 1,
+                "emailUsuario" => $this->input->post("email"),
+                "senhaUsuario" => $this->input->post("estado")
             );
 
             $_SESSION['mensagem'] = null;

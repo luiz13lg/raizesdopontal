@@ -20,7 +20,7 @@ class cliente_model extends CI_Model{
         if(!empty($busca)){
             return ($busca);
         }
-
+  
         $this->db->from('cliente');     //retornando um cliente
         $busca = $this->db->where($usuario)->get()->result();
         if(!empty($busca)){

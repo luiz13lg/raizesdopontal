@@ -14,6 +14,7 @@
 				"frutasCesta"=>$this->input->post("frutas"),
 				"legumesCesta"=>$this->input->post("legumes"),
 				"raizesCesta"=>$this->input->post("raizes"),
+				"qtdCesta"=>$this->input->post("quantidade"),
 				"verdurasCesta"=>$this->input->post("verduras")
 			);
 

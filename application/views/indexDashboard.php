@@ -115,7 +115,7 @@
                                   <td><?= $value->frutasCesta ?></td>
                                   <td><?= $value->verdurasCesta ?></td>
                                   <td><?= $value->raizesCesta ?></td>
-                                  <td><button class="btn-primary" <?php echo base_url('Welcome/') ?>>Editar </button></td>
+                                  <td><button class="btn btn-sm btn-primary" <?php echo base_url('Welcome/') ?>>Editar </button></td>
                                   </tr>
                                   <?php } ?>
 
