@@ -19,16 +19,16 @@ class Produto extends CI_Controller {
 			"descricaoProduto"=>$this->input->post('descricao')
 		);
 
-		// $this->load->view('headerIndex');
-		// $this->load->view('cadastroproduto');
-		// $this->load->view('footer');
-
-
-		
+		$_SESSION['mensagem'] = null;
 		$this->load->model('produto_model');
 		$this->produto_model->salvar($produto);
+
+		if($_SESSION['mensagem'] == null)
+			echo "<script>alert('Erro ao cadastrar produto!')</script>";
+		else echo "<script> alert('Produto cadastrado!') </script>";
+
+		$this->load->view('headerDashboard');
+		$this->load->view('cadastroProduto');
+		$this->load->view('footerDashboard');
 	}
-
-	
-
 }

@@ -10,7 +10,7 @@
 
         public function salvar(){
             $produtor = array(
-                "nomeProdutor" => $this->input->post("nome"),
+                "nomeUsuario" => $this->input->post("nome"),
                 "telProdutor" => $this->input->post("telefone"),
                 "ruaProdutor" => $this->input->post("rua"),
                 "nrProdutor" => $this->input->post("numero"),
@@ -19,15 +19,18 @@
                 "estadoProdutor" => $this->input->post("estado")
             );
 
-            $this->load->view('headerIndex');
-            $this->load->view('cadastroprodutor');
-            $this->load->view('footer');
+            $_SESSION['mensagem'] = null;
 
             $this->load->model('produtor_model');
-
             $this->produtor_model->salvar($produtor);
-        }
 
+            if($_SESSION['mensagem'] == null)
+                echo "<script>alert('Erro ao cadastrar produtor!')</script>";
+			else echo "<script> alert('Produtor cadastrado!') </script>";
+
+            $this->load->view('headerDashboard');
+		    $this->load->view('cadastroprodutor');
+		    $this->load->view('footerDashboard');
+	    }
     }
-
 ?>

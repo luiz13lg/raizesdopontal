@@ -9,7 +9,6 @@ class Admin extends CI_Controller {
 		$this->load->model('cesta_model');
 		$resultadoCesta = $this->cesta_model->teste();
 
-
 		$this->load->view('headerDashboard');
 		$this->load->view('indexDashboard', array('resultado' => $resultado, 'resultadoCesta' => $resultadoCesta));
 		$this->load->view('footerDashboard');
