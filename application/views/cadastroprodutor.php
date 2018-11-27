@@ -1,10 +1,11 @@
-<div class="container">
-    <h3> Gambiarra </h3>
-  </div>
   <div class="container">
     <h2> Cadastro de Produtor </h2>
     <div class="row" position="center">
        <form  method="post" action="<?= base_url()?>Produtor/salvar"> 
+          <div class="col-md-2">
+            
+          </div>
+          <div class="col-md-10">
             <div class="col-sm-12 form-group">
                 <input class="form-control" id="nome" name="nome" placeholder="Nome" type="text" required>
             </div>
@@ -32,6 +33,7 @@
             <div class="col-md-12 form-group">
               <button class="btn pull-right btn-success" type="submit">Adicionar</button>
             </div>
+          </div>
       </form>
     </div>
   </div>

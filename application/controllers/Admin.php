@@ -16,6 +16,22 @@ class Admin extends CI_Controller {
 
 	}
 
+	public function cadastroProduto(){
+		$this->load->view('headerDashboard');
+		$this->load->view('cadastroProduto');
+		$this->load->view('footerDashboard');
+	}
 
+	public function cadastroCesta(){
+		$this->load->view('headerDashboard');
+		$this->load->view('cadastroCesta');
+		$this->load->view('footerDashboard');
+	}
+
+	public function cadastrarProdutor(){
+		$this->load->view('headerDashboard');
+		$this->load->view('cadastroprodutor');
+		$this->load->view('footerDashboard');
+	}
 
 }

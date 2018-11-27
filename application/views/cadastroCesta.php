@@ -1,12 +1,12 @@
 <div class="container">
-    <h3> Gambiarra </h3>
-  </div>
-<div class="container">
     <h2> Cadastro de Cesta </h2>
     <hr>
     <div class="row">
       <form  method="post" action="<?= base_url()?>Cesta/nova">
-        <div class="col-md-12">
+        <div class="col-md-2">
+          
+        </div>
+        <div class="col-md-10">
           <div class="row text-center">
             <div class="col-sm-6 form-group">
               <input class="form-control" id="frutas" name="frutas" placeholder="Frutas" type="text" required>
@@ -31,6 +31,10 @@
                 <option id="descricao" name="descricao" value="grande">Grande</option>
                 <option id="descricao" name="descricao" value="pequena">Pequena</option>
               </select>
+            </div>
+
+            <div class="col-sm-6 form-group">
+              <input type="number" name="quantidade" class="form-control" id="quantidade" placeholder="Quantidade" min = '1' required>
             </div>
           </div>
 

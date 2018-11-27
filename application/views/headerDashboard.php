@@ -46,13 +46,13 @@
     	<div class="sidebar-wrapper">
 
             <ul class="nav">
-                <!-- <li class="active">
-                    <a href="dashboard.html">
+                <li class="active">
+                    <a href="<?= base_url()?>Admin/index">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
-                </li> -->
-                <!-- <li>
+                </li>
+               <!--  <li>
                     <a href="user.html">
                         <i class="pe-7s-user"></i>
                         <p>User Profile</p>
@@ -65,15 +65,21 @@
                     </a>
                 </li> -->
                 <li>
-                    <a href="<?= base_url()?>Cesta/cadastro">
+                    <a href="<?= base_url()?>Admin/cadastroCesta">
                         <i class="pe-7s-bell"></i>
                         <p>Cadastro Cesta</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url()?>Produto/">
+                    <a href="<?= base_url()?>Admin/cadastroProduto">
                         <i class="pe-7s-bell"></i>
                         <p>Cadastro Produto</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= base_url()?>Admin/cadastrarProdutor">
+                        <i class="pe-7s-bell"></i>
+                        <p>Cadastrar Produtor</p>
                     </a>
                 </li>
 

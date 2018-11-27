@@ -96,17 +96,19 @@
                             <table class="table table-striped table-condensed table-datatable">
                               <thead>
                               <tr>
-                                  <th>Valor</th>
+                                  <!-- <th>Quantidade</th> -->
+                                  <th>Tamanho</th>  
                                   <th>Legumes</th> 
                                   <th>Frutas</th>
                                   <th>Verduras</th>
-                                  <th>Raizes</th>                                          
+                                  <th>Raizes</th>                                        
                               </tr>
                               </thead> 
                               <tbody>
                                   <?php foreach ($resultadoCesta as $key => $value) { ?>
                                   <tr>
-                                  <td><?= $value->valorCesta ?></td>
+                                  <!-- <td><?= $value->valorCesta ?></td> -->
+                                  <td><?= $value->tipoCesta ?></td>
                                   <td><?= $value->legumesCesta ?></td>
                                   <td><?= $value->frutasCesta ?></td>
                                   <td><?= $value->verdurasCesta ?></td>
@@ -149,12 +151,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            escreverTabela(){
-
-            }
-        </script>
 
         <!--   Core JS Files   -->
     <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
