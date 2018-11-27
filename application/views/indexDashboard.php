@@ -1,3 +1,8 @@
+<?php
+    $logado = $_SESSION['nome'];
+?>
+
+
 <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
@@ -11,7 +16,7 @@
                     <!-- <a class="navbar-brand" href="#">Raizes do Pontal</a> -->
                 </div>
                 <div class="collapse navbar-collapse">
-                   <!--  <ul class="nav navbar-nav navbar-left">
+                                       <!--  <ul class="nav navbar-nav navbar-left">
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-dashboard"></i>
@@ -42,7 +47,9 @@
                             </a>
                         </li>
                     </ul> -->
-
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><p style="margin: 20px 10px 10px 3px"><?php echo "Bem vindo, ".$logado."!" ?></p></li>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="">

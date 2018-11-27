@@ -22,16 +22,13 @@ class Login extends CI_Controller {
 			redirect(base_url('Cliente/cadastro'));
 		}
 		else{
-			$newdata = array(
-				'nome' => $resultado[0]->nomeUsuario,
-				'email' => $resultado[0]->emailUsuario,
-				'logado' => TRUE,
-				'tipoUsuario' => $resultado[0]->tipoUsuario		//0 - adm	1 - produtor	2 - cliente
-			);
-
-			$this->session->set_userdata($newdata);
+			$_SESSION['nome'] = $resultado[0]->nomeUsuario;
+			$_SESSION['email'] = $resultado[0]->emailUsuario;
+			$_SESSION['logado'] = TRUE;
+			$_SESSION['tipoUsuario'] = $resultado[0]->tipoUsuario;
 
 			if($newdata['tipoUsuario'] == 0){	//admin
+				// $this->session->set_userdata($newdata);
 				redirect(base_url('Admin/index'));
 			}
 			if($newdata['tipoUsuario'] == 1){	//produtor
