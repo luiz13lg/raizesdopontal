@@ -11,36 +11,35 @@ class Login extends CI_Controller {
 
 	public function autentication(){
 		$usuario = array(
-			'emailCliente' => $this->input->post("email"),
-			'senhaCliente' => md5($this->input->post("senha")),
+			'emailUsuario' => $this->input->post("email"),
+			'senhaUsuario' => $this->input->post("senha"),	//colocar segurança!
 		);
 
 		$this->load->model('cliente_model');
 		$resultado = $this->cliente_model->logar($usuario);
-
-		//  var_dump($resultado);
-		//  die();
 
 		if(empty($resultado)){	//registro não encontrado
 			redirect(base_url('Cliente/cadastro'));
 		}
 		else{
 			$newdata = array(
-				'id' => $resultado[0]->id,
-				'nome' => $resultado[0]->nomeusuario,
-				'email' => $resultado[0]->emailusuario,
+				'nome' => $resultado[0]->nomeUsuario,
+				'email' => $resultado[0]->emailUsuario,
 				'logado' => TRUE,
-				'tipoUsuario' => $resultado[0]->tipousuario
+				'tipoUsuario' => $resultado[0]->tipoUsuario		//0 - adm	1 - produtor	2 - cliente
 			);
-			$this->session->set_userdata($newdata);
-			redirect(base_url('Receita/cadastrar'));
 
-/*
-	criar id de tipos de usuário, cliente 1, produtor 2, administrador 3;
-	ao realizar login, procurar nas tabelas de cliente e produtor o email dado e 
-	retornar o tipo de usuario para então veriricar aqui qual tela de login chamar;
-	Então ficará apenas uma tela de login para todos usuários!
-*/
+			$this->session->set_userdata($newdata);
+
+			if($newdata['tipoUsuario'] == 0){	//admin
+				redirect(base_url('Admin/index'));
+			}
+			if($newdata['tipoUsuario'] == 1){	//produtor
+				redirect(base_url('Receita/cadastrar'));
+			}
+			if($newdata['tipoUsuario'] == 3){	//cliente
+				redirect(base_url('Receita/cadastrar'));
+			}
 		}
 	}
 }

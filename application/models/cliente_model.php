@@ -6,19 +6,26 @@ class cliente_model extends CI_Model{
     }
 
     public function logar($usuario){
-        $this->db->where($usuario);
-        $this->db->select(*);
-        return $this->db->from('cliente');
-        return $this->db->get('cliente')->result();
+        $this->db->select('*');
+        // $this->db->where($usuario);
+        
+        $this->db->from('administrador');     //retornando um administrador
+        $busca = $this->db->where($usuario)->get()->result();
+        if(!empty($busca)){
+            return ($busca);
+        }
 
-        // $this->db->select('*');    
-        // $this->db->from('table1');
-        // $this->db->join('table2', 'table1.id = table2.id');
-        // $this->db->join('table3', 'table1.id = table3.id');
-        // $query = $this->db->get();
-        //
-        //return $this->db->get('produtor')->result();
-        //return $this->db->get('administrador')->result();
+        $this->db->from('produtor');     //retornando um produtor
+        $busca = $this->db->where($usuario)->get()->result();
+        if(!empty($busca)){
+            return ($busca);
+        }
+
+        $this->db->from('cliente');     //retornando um cliente
+        $busca = $this->db->where($usuario)->get()->result();
+        if(!empty($busca)){
+            return ($busca);
+        }
     }
 }
 

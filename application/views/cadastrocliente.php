@@ -3,7 +3,7 @@
   </div>
   <div class="container">
     <h2> Cadastro de Cliente </h2>
-    <div class="row" position="center">
+    <div class="row">
        <form  method="post" action="<?= base_url()?>Cliente/salvar">
         <div class="col-md-8">
           <div class="row text-center">
