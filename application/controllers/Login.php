@@ -29,10 +29,10 @@ class Login extends CI_Controller {
 
 			if($_SESSION['tipoUsuario'] == 0){	//admin
 				// $this->session->set_userdata($newdata);
+				$_SESSION['idProdutor'] = 0;
 				redirect(base_url('Admin/index'));
 			}
 			if($_SESSION['tipoUsuario'] == 1){	//produtor
-
 				$_SESSION['idProdutor'] = $resultado[0]->idProdutor;
 				redirect(base_url('Produtor/index'));
 			}

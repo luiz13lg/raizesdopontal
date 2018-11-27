@@ -19,7 +19,7 @@
                 "estadoProdutor" => $this->input->post("estado"),
                 "tipoUsuario" => 1,
                 "emailUsuario" => $this->input->post("email"),
-                "senhaUsuario" => md5($this->input->post("senha"))
+                "senhaUsuario" => $this->input->post("senha")
             );
 
             $_SESSION['mensagem'] = null;

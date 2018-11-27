@@ -16,7 +16,8 @@ class Produto extends CI_Controller {
 			"nomeProduto"=> $this->input->post('nome'),
 			"qtdProduto"=>$this->input->post('quantidade'),
 			"valorProduto"=> $this->input->post('valor'),
-			"descricaoProduto"=>$this->input->post('descricao')
+			"descricaoProduto"=>$this->input->post('descricao'),
+			"idProdutor"=>$_SESSION['idProdutor']
 		);
 
 		$_SESSION['mensagem'] = null;
@@ -27,8 +28,8 @@ class Produto extends CI_Controller {
 			echo "<script>alert('Erro ao cadastrar produto!')</script>";
 		else echo "<script> alert('Produto cadastrado!') </script>";
 
-		$this->load->view('headerDashboard');
-		$this->load->view('cadastroProduto');
+		$this->load->view('headerIndex');
+		redirect(base_url('Produtor/cadastroproduto'));
 		$this->load->view('footerDashboard');
 	}
 
