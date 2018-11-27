@@ -48,7 +48,8 @@
                               <thead>
                               <tr>
                                   <!-- <th>Quantidade</th> -->
-                                  <th>Tamanho</th>  
+                                  <th>Tamanho</th>
+                                  <th>Quantidade</th>  
                                   <th>Legumes</th> 
                                   <th>Frutas</th>
                                   <th>Verduras</th>
@@ -59,6 +60,7 @@
                                   <?php foreach ($resultadoCesta as $key => $value) { ?>
                                   <tr>
                                   <td><?= $value->tipoCesta ?></td>
+                                  <td><?= $value->qtdCesta ?></td>
                                   <td><?= $value->legumesCesta ?></td>
                                   <td><?= $value->frutasCesta ?></td>
                                   <td><?= $value->verdurasCesta ?></td>

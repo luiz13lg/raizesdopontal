@@ -97,7 +97,8 @@
                               <thead>
                               <tr>
                                   <!-- <th>Quantidade</th> -->
-                                  <th>Tamanho</th>  
+                                  <th>Tamanho</th>
+                                  <th>Quantidade</th>  
                                   <th>Legumes</th> 
                                   <th>Frutas</th>
                                   <th>Verduras</th>
@@ -109,6 +110,7 @@
                                   <tr>
                                   <!-- <td><?= $value->valorCesta ?></td> -->
                                   <td><?= $value->tipoCesta ?></td>
+                                  <td><?= $value->qtdCesta ?></td>
                                   <td><?= $value->legumesCesta ?></td>
                                   <td><?= $value->frutasCesta ?></td>
                                   <td><?= $value->verdurasCesta ?></td>
