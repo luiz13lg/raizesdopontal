@@ -19,7 +19,10 @@ class Login extends CI_Controller {
 		$resultado = $this->cliente_model->logar($usuario);
 
 		if(empty($resultado)){	//registro não encontrado
-
+			$this->load->view('headerIndex');
+			$this->load->view('login');
+			$this->load->view('footer');			
+			echo "<script>alert('Usuário ou Senha inválidos!')</script>";
 		}
 		else{
 			$_SESSION['nome'] = $resultado[0]->nomeUsuario;

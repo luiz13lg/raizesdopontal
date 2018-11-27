@@ -2,8 +2,7 @@
 
     class produto_model extends CI_Model{
         public function salvar($produto){
-            $this->db->insert("produto",$produto);
-            $_SESSION['mensagem'] = 'Produto cadastrado!';
+            return $this->db->insert("produto",$produto);
         }
 
         public function teste(){
@@ -15,6 +14,12 @@
             $this->db->select('*');
             $this->db->where('idProdutor',$idProdutor);
             return $this->db->from('Produto')->get()->result();
+        }
+
+        public function remove($idProduto){
+            $this->db->select('*');
+            $this->db->where('idProduto',$idProduto);
+            $this->db->delete('produto');
         }
 
     }

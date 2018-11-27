@@ -22,15 +22,20 @@ class Produto extends CI_Controller {
 
 		$_SESSION['mensagem'] = null;
 		$this->load->model('produto_model');
-		$this->produto_model->salvar($produto);
+		
+		if($this->produto_model->salvar($produto)){
+			$this->session->set_flashdata('mensagem', "Sucesso!");
+			$this->session->set_flashdata('color', "success");
+		}else{
+			$this->session->set_flashdata('mensagem', "Sucesso!");
+			$this->session->set_flashdata('color', "danger");
+		}
 
-		if($_SESSION['mensagem'] == null)
-			echo "<script>alert('Erro ao cadastrar produto!')</script>";
-		else echo "<script> alert('Produto cadastrado!') </script>";
 
-		$this->load->view('headerIndex');
-		redirect(base_url('Produtor/cadastroproduto'));
-		$this->load->view('footerDashboard');
+		redirect('Produtor/cadastroProduto');
+		// $this->load->view('headerIndex');
+		// redirect(base_url('Produtor/cadastroproduto'));
+		// $this->load->view('footerDashboard');
 	}
 
 	public function produtos(){

@@ -88,10 +88,9 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    
+                <h3 style="color: #B22222">Cestas</h3>
                     <div class="card">
                         <div class="card-body">
-                            <h3 style="color: #B22222">Cestas</h3>
                             <!-- Tabela de Funcionarios ativos -->
                             <table class="table table-striped table-condensed table-datatable">
                               <thead>
@@ -122,9 +121,9 @@
                         </div>
                      </div>
 
+                    <h3 style="color: #B22222">Produtos</h3>
                     <div class="card">
                     <div class="card-body">
-                        <h3 style="color: #B22222">Produtos</h3>
                         <!-- Tabela de Funcionarios ativos -->
                         <table class="table table-striped table-condensed table-datatable">
                           <thead>

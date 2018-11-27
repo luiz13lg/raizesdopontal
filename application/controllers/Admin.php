@@ -33,4 +33,13 @@ class Admin extends CI_Controller {
 		$this->load->view('footerDashboard');
 	}
 
+	public function removerProduto($idProduto){
+		$this->load->model('produto_model');
+		$this->produto_model->remove($idProduto);
+
+		echo "<script>alert('Produto Removido!')</script>";
+		
+		redirect('Admin/');
+	}
+
 }

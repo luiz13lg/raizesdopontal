@@ -1,12 +1,18 @@
 <div class="container">
     <h2> Cadastro de Produto </h2>
+    <?php if($this->session->mensagem){ ?>
+    <div class="col-md-10 col-md-offset-2">
+      <div class="alert alert-<?= $this->session->color ?>" role="alert">
+        <?= $this->session->mensagem ?>
+      </div>
+    </div>
+    <?php } ?>
+    
     <hr>
     <div class="row">
       <form  method="post" action="<?= base_url()?>Produto/novo">
-        <div class="col-md-2">
-          
-        </div>
-        <div class="col-md-10">
+  
+        <div class="col-md-10 col-md-offset-2">
           <div class="row text-center">
             <div class="col-sm-6 form-group">
               <input class="form-control" id="nome" name="nome" placeholder="Nome do Produto" type="text" required>
