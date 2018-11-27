@@ -13,6 +13,9 @@
                 <input class="form-control" id="email" name="email" placeholder="E-mail" type="text" required>
             </div>
             <div class="col-sm-12 form-group">
+              <input class="form-control" id="senha" name="senha" placeholder="Senha" type="password" required>
+            </div>
+            <div class="col-sm-12 form-group">
               <input class="form-control" id="telefone" name="telefone" placeholder="Telefone" type="text" required>
             </div>
             <div class="col-sm-12 form-group">

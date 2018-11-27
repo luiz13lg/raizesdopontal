@@ -28,4 +28,15 @@ class Cliente extends CI_Controller {
 		$this->load->model('cliente_model');
 		$this->cliente_model->salva($usuario);
 	}
+
+	public function index(){
+		$this->load->model('produto_model');
+		$resultado = $this->produto_model->teste();
+		$this->load->model('cesta_model');
+		$resultadoCesta = $this->cesta_model->teste();
+
+		$this->load->view('headerDashboardCliente');
+		$this->load->view('indexDashboardCliente', array('resultado' => $resultado, 'resultadoCesta' => $resultadoCesta));
+		$this->load->view('footerDashboard');
+	}
 }
