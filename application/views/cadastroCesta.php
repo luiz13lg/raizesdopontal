@@ -27,7 +27,7 @@
 
           <div class="row text-center">
             <div class="col-sm-6 form-group">
-              <select name="descricao">
+              <select name="descricao" class="form-control">
                 <option id="descricao" name="descricao" value="grande">Grande</option>
                 <option id="descricao" name="descricao" value="pequena">Pequena</option>
               </select>
