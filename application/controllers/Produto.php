@@ -42,4 +42,13 @@ class Produto extends CI_Controller {
 		$this->load->view('verProdutos', array('resultado' => $resultado, 'resultadoCesta' => $resultadoCesta));
 		$this->load->view('footer');
 	}
+
+	public function listaProdutos(){
+		$this->load->model('produto_model');
+		$resultado = $this->produto_model->teste();
+
+		$this->load->view('headerDashboard');
+		$this->load->view('adicionarProduto', array('resultado' => $resultado));
+		$this->load->view('footer');
+	}
 }

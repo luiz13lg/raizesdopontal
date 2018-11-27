@@ -18,8 +18,7 @@
                                   <th>Legumes</th> 
                                   <th>Frutas</th>
                                   <th>Verduras</th>
-                                  <th>Raizes</th>
-                                  <th></th>                           
+                                  <th>Raizes</th>                         
                               </tr>
                               </thead> 
                               <tbody>
