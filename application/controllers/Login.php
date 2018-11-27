@@ -12,14 +12,14 @@ class Login extends CI_Controller {
 	public function autentication(){
 		$usuario = array(
 			'emailUsuario' => $this->input->post("email"),
-			'senhaUsuario' => md5($this->input->post("senha")),
+			'senhaUsuario' => $this->input->post("senha"),
 		);
 
 		$this->load->model('cliente_model');
 		$resultado = $this->cliente_model->logar($usuario);
 
 		if(empty($resultado)){	//registro não encontrado
-			redirect(base_url('Cliente/cadastro'));
+
 		}
 		else{
 			$_SESSION['nome'] = $resultado[0]->nomeUsuario;
@@ -32,6 +32,8 @@ class Login extends CI_Controller {
 				redirect(base_url('Admin/index'));
 			}
 			if($_SESSION['tipoUsuario'] == 1){	//produtor
+
+				$_SESSION['idProdutor'] = $resultado[0]->idProdutor;
 				redirect(base_url('Produtor/index'));
 			}
 			if($_SESSION['tipoUsuario'] == 2){	//cliente

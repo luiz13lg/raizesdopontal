@@ -8,8 +8,6 @@
         public function teste(){
         	$this->db->select('*');
         	return $this->db->from('Cesta')->get()->result();
-
         }
-
     }
 ?>

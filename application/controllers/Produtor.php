@@ -19,7 +19,7 @@
                 "estadoProdutor" => $this->input->post("estado"),
                 "tipoUsuario" => 1,
                 "emailUsuario" => $this->input->post("email"),
-                "senhaUsuario" => $this->input->post("estado")
+                "senhaUsuario" => md5($this->input->post("senha"))
             );
 
             $_SESSION['mensagem'] = null;
@@ -38,7 +38,7 @@
 
         public function index(){
             $this->load->model('produto_model');
-            $resultado = $this->produto_model->teste();
+            $resultado = $this->produto_model->recupera($_SESSION['idProdutor']);
             $this->load->model('cesta_model');
             $resultadoCesta = $this->cesta_model->teste();
 

@@ -9,8 +9,14 @@
         public function teste(){
         	$this->db->select('*');
         	return $this->db->from('Produto')->get()->result();
-
         }
+
+        public function recupera($idProdutor){
+            $this->db->select('*');
+            $this->db->where('idProdutor',$idProdutor);
+            return $this->db->from('Produto')->get()->result();
+        }
+
     }
 
 

@@ -7,8 +7,7 @@ class cliente_model extends CI_Model{
 
     public function logar($usuario){
         $this->db->select('*');
-        // $this->db->where($usuario);
-        
+        $this->db->where($usuario);
         $this->db->from('administrador');     //retornando um administrador
         $busca = $this->db->where($usuario)->get()->result();
         if(!empty($busca)){
