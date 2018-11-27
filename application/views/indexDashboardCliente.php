@@ -40,9 +40,10 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+                  <h3 style="color: #B22222">Cestas</h3>
                     <div class="card">
                         <div class="card-body">
-                            <h3 style="color: #B22222">Cestas</h3>
+                            
                             <!-- Tabela de Funcionarios ativos -->
                             <table class="table table-striped table-condensed table-datatable">
                               <thead>
@@ -77,22 +78,25 @@
                     <div class="content" style="width: 40%">
                       <div class="container-fluid">
                         <div class="row">
+                          <form action="<?= base_url('Cliente/reservarCesta') ?>" method="POST">
                           <div class="col-md-6">
-                            <select class="form-control">
+                            <select class="form-control" name="tipo">
                               <option value="grande">Grande</option>
                               <option value="pequena">Pequena</option>
                             </select>
                           </div>
                           <div class="col-md-6 form-group">
-                            <button class="btn pull-right btn-success" type="submit">Fazer Pedido</button>
+                            <button class="btn pull-right btn-success">Fazer Pedido</button>
                           </div>
+                          </form>
                         </div>
                       </div>
                     </div>
-
+                    
+                    <h3 style="color: #B22222">Produtos</h3>
                     <div class="card">
                       <div class="card-body">
-                          <h3 style="color: #B22222">Produtos</h3>
+                          
                           <!-- Tabela de Funcionarios ativos -->
                           <table class="table table-striped table-condensed table-datatable">
                             <thead>

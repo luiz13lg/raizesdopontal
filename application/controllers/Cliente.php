@@ -3,6 +3,7 @@
 
 class Cliente extends CI_Controller {
 
+
 	public function cadastro(){
 		$this->load->view('headerIndex');
 		$this->load->view('cadastrocliente');
@@ -39,5 +40,14 @@ class Cliente extends CI_Controller {
 		$this->load->view('headerDashboardCliente');
 		$this->load->view('indexDashboardCliente', array('resultado' => $resultado, 'resultadoCesta' => $resultadoCesta));
 		$this->load->view('footerDashboard');
+	}
+
+	public function reservarCesta(){
+		$tipo = $this->input->post('tipo');
+
+		$this->load->model('cliente_model');
+		$this->cliente_model->reservarCesta($tipo,$_SESSION['idCliente']);
+
+		redirect('Cliente/index');
 	}
 }

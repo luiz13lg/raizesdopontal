@@ -26,6 +26,34 @@ class cliente_model extends CI_Model{
             return ($busca);
         }
     }
+
+    public function reservarCesta($tipo,$id_cliente){
+        $count = ($this->db->select('qtdCesta')->from('cesta')->where('tipoCesta', $tipo)->get()->row()->qtdCesta);
+        if($count > 0){
+            $count--;
+            $update['qtdCesta'] = $count;
+            $this->db->flush_cache();
+
+            $this->db->where('tipoCesta',$tipo);
+            $this->db->update('cesta',$update);
+
+            $this->db->flush_cache();
+
+            $dados['id_cliente'] = $id_cliente;
+            $dados['tipoCesta'] = $tipo; 
+
+            return $this->db->insert('reserva',$dados);
+        }else{
+            return false;
+        }
+    }
+
+    public function teste(){
+        $this->db->select('*');
+        $this->db->from('cliente');
+        $this->db->join('reserva', 'cliente.idCliente = reserva.id_cliente');
+        return $this->db->get()->result();
+    }
 }
 
 ?>
