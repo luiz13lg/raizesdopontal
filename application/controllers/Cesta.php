@@ -21,16 +21,16 @@
 			$_SESSION['mensagem'] = null;
 
 			$this->load->model('cesta_model');
-			$this->cesta_model->salvar($cesta);
 
-			if($_SESSION['mensagem'] == null)
-				echo "<script>alert('Erro ao cadastrar cesta!')</script>";
-			else echo "<script> alert('Cesta cadastrada!') </script>";
-
-			$this->load->view('headerDashboard');
-			$this->load->view('cadastroCesta');
-			$this->load->view('footerDashboard');
-
+			if($this->cesta_model->salvar($cesta)){
+				$this->session->set_flashdata('mensagem','Sucesso!');
+				$this->session->set_flashdata('color','success');
+			}else{
+				$this->session->set_flashdata('mensagem','Erro!');
+				$this->session->set_flashdata('color','danger');
+			}
+				
+			redirect('Admin/cadastroCesta');
 		}
 
 		public function cestas(){

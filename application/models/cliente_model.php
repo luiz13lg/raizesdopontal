@@ -26,6 +26,12 @@ class cliente_model extends CI_Model{
             return ($busca);
         }
     }
+
+    public function fazerPedido($pedido){
+        return $this->db->insert("reserva",$pedido);
+        var_dump($pedido);
+        die();
+    }
 }
 
 ?>

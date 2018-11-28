@@ -22,7 +22,7 @@ class Produto extends CI_Controller {
 
 		$_SESSION['mensagem'] = null;
 		$this->load->model('produto_model');
-		
+
 		if($this->produto_model->salvar($produto)){
 			$this->session->set_flashdata('mensagem', "Sucesso!");
 			$this->session->set_flashdata('color', "success");

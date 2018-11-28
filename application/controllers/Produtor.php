@@ -25,15 +25,24 @@
             $_SESSION['mensagem'] = null;
 
             $this->load->model('produtor_model');
-            $this->produtor_model->salvar($produtor);
 
-            if($_SESSION['mensagem'] == null)
-                echo "<script>alert('Erro ao cadastrar produtor!')</script>";
-			else echo "<script> alert('Produtor cadastrado!') </script>";
+            if($this->produtor_model->salvar($produtor)){
+                $this->session->set_flashdata('mensagem', "Sucesso!");
+			    $this->session->set_flashdata('color', "success");
+            }
+            else{
+                $this->session->set_flashdata('mensagem', "Erro!");
+                $this->session->set_flashdata('color', "danger");
+            }
 
-            $this->load->view('headerDashboard');
-		    $this->load->view('cadastroprodutor');
-		    $this->load->view('footerDashboard');
+            // if($_SESSION['mensagem'] == null)
+            //     echo "<script>alert('Erro ao cadastrar produtor!')</script>";
+			// else echo "<script> alert('Produtor cadastrado!') </script>";
+
+            redirect('Admin/cadastrarProdutor');
+            // $this->load->view('headerDashboard');
+		    // $this->load->view('cadastroprodutor');
+		    // $this->load->view('footerDashboard');
 	    }
 
         public function index(){
@@ -52,6 +61,18 @@
             $this->load->view('headerDashboardProdutor');
             $this->load->view('cadastroProduto');
             $this->load->view('footerDashboard');
+        }
+
+        public function removerProduto($idProduto){
+            $this->load->model('produto_model');
+            if($this->produto_model->remove($idProduto)){
+                $this->session->set_flashdata('mensagem', "Sucesso!");
+                $this->session->set_flashdata('color', "success");
+            }else{
+                $this->session->set_flashdata('mensagem', "Erro!");
+                $this->session->set_flashdata('color', "danger");
+            }
+            redirect('Produtor/');
         }
     }
 ?>

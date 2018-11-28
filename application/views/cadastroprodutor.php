@@ -1,11 +1,14 @@
   <div class="container">
     <h2> Cadastro de Produtor </h2>
+    <div class="col-md-10 col-md-offset-2">
+      <div class="alert alert-<?= $this->session->color ?>" role="alert">
+          <?= $this->session->mensagem ?>
+      </div>
+    </div>
     <div class="row" position="center">
        <form  method="post" action="<?= base_url()?>Produtor/salvar"> 
-          <div class="col-md-2">
-            
-          </div>
-          <div class="col-md-10">
+
+          <div class="col-md-10 col-md-offset-2">
             <div class="col-sm-12 form-group">
                 <input class="form-control" id="nome" name="nome" placeholder="Nome" type="text" required>
             </div>

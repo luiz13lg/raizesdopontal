@@ -1,12 +1,16 @@
 <div class="container">
+    
+    <div class="col-md-10 col-md-offset-2">
+      <div class="alert alert-<?= $this->session->color ?>" role="alert">
+          <?= $this->session->mensagem ?>
+      </div>
+    </div>
+    
     <h2> Cadastro de Cesta </h2>
     <hr>
     <div class="row">
       <form  method="post" action="<?= base_url()?>Cesta/nova">
-        <div class="col-md-2">
-          
-        </div>
-        <div class="col-md-10">
+        <div class="col-md-10 col-md-offset-2">
           <div class="row text-center">
             <div class="col-sm-6 form-group">
               <input class="form-control" id="frutas" name="frutas" placeholder="Frutas" type="text" required>

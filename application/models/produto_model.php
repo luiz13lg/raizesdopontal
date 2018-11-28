@@ -19,7 +19,7 @@
         public function remove($idProduto){
             $this->db->select('*');
             $this->db->where('idProduto',$idProduto);
-            $this->db->delete('produto');
+            return $this->db->delete('produto');
         }
 
     }

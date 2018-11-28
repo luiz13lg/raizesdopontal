@@ -40,4 +40,19 @@ class Cliente extends CI_Controller {
 		$this->load->view('indexDashboardCliente', array('resultado' => $resultado, 'resultadoCesta' => $resultadoCesta));
 		$this->load->view('footerDashboard');
 	}
+
+	public function fazerPedido($tipoCesta){
+		$pedido = array(
+			"id_cliente"=> $_SESSION['idCliente'],
+			"tipoCesta"=> $tipoCesta
+		);
+
+		// var_dump($pedido);
+		// die();
+
+		$this->load->model('cliente_model');
+		$this->cliente_model->fazerPedido($pedido);
+
+		redirect('Cliente/');
+	}
 }

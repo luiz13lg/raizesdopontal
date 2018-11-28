@@ -40,6 +40,7 @@ class Login extends CI_Controller {
 				redirect(base_url('Produtor/index'));
 			}
 			if($_SESSION['tipoUsuario'] == 2){	//cliente
+				$_SESSION['idCliente'] = $resultado[0]->idCliente;
 				redirect(base_url('Cliente/index'));
 			}
 		}

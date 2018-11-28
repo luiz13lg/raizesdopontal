@@ -12,7 +12,6 @@ class Admin extends CI_Controller {
 		$this->load->view('headerDashboard');
 		$this->load->view('indexDashboard', array('resultado' => $resultado, 'resultadoCesta' => $resultadoCesta));
 		$this->load->view('footerDashboard');
-
 	}
 
 	public function cadastroProduto(){
@@ -33,12 +32,29 @@ class Admin extends CI_Controller {
 		$this->load->view('footerDashboard');
 	}
 
+	public function removerCesta($tipoCesta){
+		$this->load->model('cesta_model');
+		
+		if($this->cesta_model->remover($tipoCesta)){
+			$this->session->set_flashdata('mensagem', "Sucesso!");
+			$this->session->set_flashdata('color', "success");
+		}else{
+			$this->session->set_flashdata('mensagem', "Erro!");
+			$this->session->set_flashdata('color', "danger");
+		}
+		redirect('Admin/');
+	}
+
 	public function removerProduto($idProduto){
 		$this->load->model('produto_model');
-		$this->produto_model->remove($idProduto);
-
-		echo "<script>alert('Produto Removido!')</script>";
 		
+		if($this->produto_model->remove($idProduto)){
+			$this->session->set_flashdata('mensagem', "Sucesso!");
+			$this->session->set_flashdata('color', "success");
+		}else{
+			$this->session->set_flashdata('mensagem', "Erro!");
+			$this->session->set_flashdata('color', "danger");
+		}
 		redirect('Admin/');
 	}
 
