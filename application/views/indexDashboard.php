@@ -1,5 +1,5 @@
 <?php
-    $logado = $_SESSION['nome'];
+$logado = $_SESSION['nome'];
 ?>
 
 
@@ -75,82 +75,115 @@
                                   </tr>
                                   <?php } ?>
 
-                              </tbody>  
-                            </table>
-                        </div>
-                     </div>
-                    
-                    <h3 style="color: #B22222">Produtos que serão vendidos</h3>
-                    <div class="card">
-                    <div class="card-body">
-                        
-                        <!-- Tabela de Funcionarios ativos -->
-                        <table class="table table-striped table-condensed table-datatable">
-                          <thead>
-                          <tr>
-                              <th>Nome</th>
-                              <th>Descrição</th> 
-                              <th>Quantidade</th>
-                              <th>Preço</th>                                          
-                          </tr>
-                          </thead> 
-                          <tbody>
-                              <?php foreach ($resultado as $key => $value) { ?>
-                              <tr>
-                              <td><?= $value->nomeProduto ?></td>
-                              <td><?= $value->descricaoProduto ?></td>
-                              <td><?= $value->qtdProduto ?></td>
-                              <td><?= $value->valorProduto ?></td>
-                              <td>
-                                    <a class="btn btn-sm btn-danger" href="<?php echo base_url('Admin/removerProduto/'.$value->idProduto) ?>">
+                                </tbody>  
+                              </table>
+                            </div>
+                          </div>
+
+                          <h3 style="color: #B22222">Produtos que serão vendidos</h3>
+                          <div class="card">
+                            <div class="card-body">
+
+                              <!-- Tabela de Funcionarios ativos -->
+                              <table class="table table-striped table-condensed table-datatable">
+                                <thead>
+                                  <tr>
+                                    <th>Nome</th>
+                                    <th>Descrição</th> 
+                                    <th>Quantidade</th>
+                                    <th>Preço</th>                                          
+                                  </tr>
+                                </thead> 
+                                <tbody>
+                                  <?php foreach ($resultado as $key => $value) { ?>
+                                  <tr>
+                                    <td><?= $value->nomeProduto ?></td>
+                                    <td><?= $value->descricaoProduto ?></td>
+                                    <td><?= $value->qtdProduto ?></td>
+                                    <td><?= $value->valorProduto ?></td>
+                                    <td>
+                                      <a class="btn btn-sm btn-danger" href="<?php echo base_url('Admin/removerProduto/'.$value->idProduto) ?>">
                                         Remover
-                                    </a>
-                              </td>
-                              </tr>
-                              <?php } ?>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                  <?php } ?>
 
-                          </tbody>  
-                        </table>
+                                </tbody>  
+                              </table>
+                            </div>
+                          </div>
+
+
+
+
+
+                          <h3 style="color: #B22222">Reservas</h3>
+                          <div class="card">
+                            <div class="card-body">
+
+                              <!-- Tabela de Funcionarios ativos -->
+                              <table class="table table-striped table-condensed table-datatable">
+                                <thead>
+                                  <tr>
+                                    <th>Nome</th>
+                                    <th>Tipo</th> 
+                                    <th>Data</th>                                      
+                                  </tr>
+                                </thead> 
+                                <tbody>
+                                  <?php foreach ($resultadoReserva as $key => $value) { ?>
+                                  <tr>
+                                    <td><?= $value->nomeUsuario ?></td>
+                                    <td><?= $value->tipoCesta ?></td>
+                                    <td><?= $value->timestamp ?></td>
+                                  </tr>
+                                  <?php } ?>
+
+                                </tbody>  
+                              </table>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div>
                     </div>
-                </div>
-                </div>
-            </div>
-        </div>
 
-        <!--   Core JS Files   -->
-    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+                    <!--   Core JS Files   -->
+                    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+                    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
-    <!--  Charts Plugin -->
-    <script src="assets/js/chartist.min.js"></script>
+                    <!--  Charts Plugin -->
+                    <script src="assets/js/chartist.min.js"></script>
 
-    <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
+                    <!--  Notifications Plugin    -->
+                    <script src="assets/js/bootstrap-notify.js"></script>
 
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+                    <!--  Google Maps Plugin    -->
+                    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-    <script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+                    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+                    <script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
 
-    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-    <script src="assets/js/demo.js"></script>
+                    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+                    <script src="assets/js/demo.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
+                    <script type="text/javascript">
+                      $(document).ready(function(){
 
-            demo.initChartist();
+                        demo.initChartist();
 
-            $.notify({
-                icon: 'pe-7s-gift',
-                message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+                        $.notify({
+                          icon: 'pe-7s-gift',
+                          message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
 
-            },{
-                type: 'info',
-                timer: 4000
-            });
+                        },{
+                          type: 'info',
+                          timer: 4000
+                        });
 
-        });
-    </script>
+                      });
+                    </script>
 
-    </html>
+                    </html>

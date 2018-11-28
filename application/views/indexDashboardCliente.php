@@ -40,9 +40,10 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <h3 style="color: #B22222">Cestas</h3>
+                  <h3 style="color: #B22222">Cestas</h3>
                     <div class="card">
                         <div class="card-body">
+                            
                             <!-- Tabela de Funcionarios ativos -->
                             <table class="table table-striped table-condensed table-datatable">
                               <thead>
@@ -66,7 +67,7 @@
                                   <td><?= $value->verdurasCesta ?></td>
                                   <td><?= $value->raizesCesta ?></td>
                                   <td>
-                                    <a class="btn btn-sm btn-success" href="<?= base_url('Cliente/fazerPedido/'.$value->tipoCesta) ?>">Fazer Pedido</a>
+                                    <a class="btn btn-sm btn-success" href="<?= base_url('Cliente/reservarCesta/'.$value->tipoCesta) ?>">Fazer Pedido</a>
                                   </td>
                                   </tr>
                                   <?php } ?>
@@ -76,9 +77,29 @@
                         </div>
                      </div>
 
+                    <!-- <h3 style="color: black">Comprar Cesta</h3>
+                    <div class="content" style="width: 40%">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <form action="<?= base_url('Cliente/reservarCesta') ?>" method="POST">
+                          <div class="col-md-6">
+                            <select class="form-control" name="tipo">
+                              <option value="grande">Grande</option>
+                              <option value="pequena">Pequena</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 form-group">
+                            <button class="btn pull-right btn-success">Fazer Pedido</button>
+                          </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div> -->
+                    
                     <h3 style="color: #B22222">Produtos</h3>
                     <div class="card">
                       <div class="card-body">
+                          
                           <!-- Tabela de Funcionarios ativos -->
                           <table class="table table-striped table-condensed table-datatable">
                             <thead>
