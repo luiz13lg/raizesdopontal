@@ -3,6 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Produto extends CI_Controller {
 
+	public class __construct(){
+		if($_SESSION['tipoUsuario']== null)
+			redirect('login/');
+	}
 
 	public function index(){
 		
@@ -30,12 +34,10 @@ class Produto extends CI_Controller {
 			$this->session->set_flashdata('mensagem', "Sucesso!");
 			$this->session->set_flashdata('color', "danger");
 		}
-
-
-		redirect('Produtor/cadastroProduto');
-		// $this->load->view('headerIndex');
-		// redirect(base_url('Produtor/cadastroproduto'));
-		// $this->load->view('footerDashboard');
+		
+		if($_SESSION['tipoUsuario'] == 0)
+			redirect('Admin/cadastroProduto');
+		else redirect('Produtor/cadastroProduto');
 	}
 
 	public function produtos(){

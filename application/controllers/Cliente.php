@@ -3,6 +3,12 @@
 
 class Cliente extends CI_Controller {
 
+	public function __construct(){
+		parent:: __construct();
+
+		$this->load->model('cliente_model');
+		$this->cliente_model->verificar('2');
+	}
 
 	public function cadastro(){
 		$this->load->view('headerIndex');
@@ -48,5 +54,12 @@ class Cliente extends CI_Controller {
 		$this->cliente_model->reservarCesta($tipo,$_SESSION['idCliente']);
 
 		redirect('Cliente/index');
+	}
+
+	public function logout(){
+		session_start();
+		session_destroy();
+
+		redirect('Login/');
 	}
 }

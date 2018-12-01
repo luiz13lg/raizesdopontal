@@ -1,6 +1,14 @@
 <?php
 
+
     class Produtor extends CI_Controller{
+
+        public function __construct(){
+            parent:: __construct();
+    
+            $this->load->model('cliente_model');
+            $this->cliente_model->verificar('1');
+        }
 
         public function cadastrar(){
             $this->load->view('headerIndex');
@@ -74,5 +82,11 @@
             }
             redirect('Produtor/');
         }
+        
+        public function logout(){
+            session_start();
+            session_destroy();
+    
+            redirect('Login/');
+        }
     }
-?>

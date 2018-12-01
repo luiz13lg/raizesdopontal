@@ -8,7 +8,7 @@ class cliente_model extends CI_Model{
     public function logar($usuario){
         $this->db->select('*');
         $this->db->where($usuario);
-        $this->db->from('administrador');     //retornando um administrador
+        $this->db->from('administrador'); //retornando um administrador
         $busca = $this->db->where($usuario)->get()->result();
         if(!empty($busca)){
             return ($busca);
@@ -27,6 +27,28 @@ class cliente_model extends CI_Model{
         }
     }
 
+    public function verificar($tipoUsuarioPrevisto){
+        $logged = $this->session->userdata('logado');
+        $tipoUsuario = $this->session->userdata('tipoUsuario');
+
+        if(!$logged){
+            redirect('login/');
+        }
+
+        if($tipoUsuarioPrevisto != $tipoUsuario)
+            switch($tipoUsuario){
+                case 0:
+                    redirect('Admin/');
+                    break;
+                case 1:
+                    redirect('Produtor/');
+                    break;
+                case 2:
+                    redirect('Cliente/');
+                    break;
+            }
+    }
+
     public function reservarCesta($tipo,$id_cliente){
         $count = ($this->db->select('qtdCesta')->from('cesta')->where('tipoCesta', $tipo)->get()->row()->qtdCesta);
         if($count > 0){
@@ -40,7 +62,7 @@ class cliente_model extends CI_Model{
             return false;
         }
     }
-
+    
     public function teste(){
         $this->db->select('*');
         $this->db->from('cliente');

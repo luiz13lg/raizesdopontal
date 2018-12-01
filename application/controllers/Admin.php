@@ -3,6 +3,13 @@
 
 class Admin extends CI_Controller {
 
+	public function __construct(){
+		parent::__construct();
+
+		$this->load->model('cliente_model');
+		$this->cliente_model->verificar('0');
+	}
+
 	public function index(){
 		$this->load->model('produto_model');
 		$dados['resultado'] = $this->produto_model->teste();
@@ -58,6 +65,13 @@ class Admin extends CI_Controller {
 			$this->session->set_flashdata('color', "danger");
 		}
 		redirect('Admin/');
+	}
+
+	public function logout(){
+		session_start();
+		session_destroy();
+
+		redirect('Login/');
 	}
 
 }

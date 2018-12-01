@@ -27,7 +27,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo base_url('Cliente/logout/') ?>">
                                 <p>Log out</p>
                             </a>
                         </li>

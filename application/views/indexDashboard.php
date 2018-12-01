@@ -21,7 +21,7 @@ $logado = $_SESSION['nome'];
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#">
+                            <a href="<?php echo base_url('Admin/logout/')?>">
                                 <p>Log out</p>
                             </a>
                         </li>
