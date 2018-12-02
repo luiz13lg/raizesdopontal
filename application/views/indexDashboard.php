@@ -91,7 +91,8 @@ $logado = $_SESSION['nome'];
                                     <th>Nome</th>
                                     <th>Descrição</th> 
                                     <th>Quantidade</th>
-                                    <th>Preço</th>                                          
+                                    <th>Preço</th>
+                                    <th>Produtor</th>                                          
                                   </tr>
                                 </thead> 
                                 <tbody>
@@ -129,7 +130,7 @@ $logado = $_SESSION['nome'];
                                   <tr>
                                     <th>Nome</th>
                                     <th>Tipo</th> 
-                                    <th>Data</th>                                      
+                                    <th>Data</th>                                    
                                   </tr>
                                 </thead> 
                                 <tbody>
