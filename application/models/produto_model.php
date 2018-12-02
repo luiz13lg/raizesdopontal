@@ -7,7 +7,10 @@
 
         public function teste(){
         	$this->db->select('*');
-        	return $this->db->from('Produto')->get()->result();
+            $this->db->from('Produto'); //->get()->result();
+            $this->db->join('Produtor','Produto.idProdutor = Produtor.idProdutor');
+
+            return $this->db->get()->result();
         }
 
         public function recupera($idProdutor){

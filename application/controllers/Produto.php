@@ -3,8 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Produto extends CI_Controller {
 
-	public class __construct(){
-		if($_SESSION['tipoUsuario']== null)
+	public function __construct(){
+		parent:: __construct();
+		
+		if($_SESSION['tipoUsuario'] == null)
 			redirect('login/');
 	}
 
@@ -21,6 +23,7 @@ class Produto extends CI_Controller {
 			"qtdProduto"=>$this->input->post('quantidade'),
 			"valorProduto"=> $this->input->post('valor'),
 			"descricaoProduto"=>$this->input->post('descricao'),
+			"tipoProduto"=>$this->input->post('tipo'),
 			"idProdutor"=>$_SESSION['idProdutor']
 		);
 

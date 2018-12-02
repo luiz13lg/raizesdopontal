@@ -2,7 +2,6 @@
     $logado = $_SESSION['nome'];
 ?>
 
-
 <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
@@ -76,7 +75,7 @@
                         </div>
                      </div>
 
-                    <h3 style="color: #B22222">Produtos</h3>
+                    <h3 style="color: #B22222">Seus Produtos</h3>
                     <div class="card">
                     <div class="card-body">
                         <!-- Tabela de Funcionarios ativos -->

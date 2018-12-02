@@ -2,7 +2,6 @@
 $logado = $_SESSION['nome'];
 ?>
 
-
 <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
@@ -80,7 +79,7 @@ $logado = $_SESSION['nome'];
                             </div>
                           </div>
 
-                          <h3 style="color: #B22222">Produtos que serão vendidos</h3>
+                          <h3 style="color: #B22222">Produtos Disponíveis</h3>
                           <div class="card">
                             <div class="card-body">
 
@@ -88,6 +87,7 @@ $logado = $_SESSION['nome'];
                               <table class="table table-striped table-condensed table-datatable">
                                 <thead>
                                   <tr>
+                                    <th>Produtor</th>
                                     <th>Nome</th>
                                     <th>Descrição</th> 
                                     <th>Quantidade</th>
@@ -97,6 +97,7 @@ $logado = $_SESSION['nome'];
                                 <tbody>
                                   <?php foreach ($resultado as $key => $value) { ?>
                                   <tr>
+                                    <td><?= $value->nomeUsuario ?></td>
                                     <td><?= $value->nomeProduto ?></td>
                                     <td><?= $value->descricaoProduto ?></td>
                                     <td><?= $value->qtdProduto ?></td>

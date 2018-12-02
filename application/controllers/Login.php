@@ -11,7 +11,6 @@ class Login extends CI_Controller {
 
 	public function autentication(){
 
-		session_start();
 
 		$usuario = array(
 			'emailUsuario' => $this->input->post("email"),
@@ -34,7 +33,7 @@ class Login extends CI_Controller {
 			$_SESSION['tipoUsuario'] = $resultado[0]->tipoUsuario;
 
 			if($_SESSION['tipoUsuario'] == 0){	//admin
-				$_SESSION['idProdutor'] = 0;
+				$_SESSION['idProdutor'] = 1;
 				redirect(base_url('Admin/index'));
 			}
 			if($_SESSION['tipoUsuario'] == 1){	//produtor

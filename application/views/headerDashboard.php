@@ -65,7 +65,7 @@
                 <li>
                     <a href="<?= base_url()?>Admin/cadastroCesta">
                         <i class="pe-7s-bell"></i>
-                        <p>Cadastro Cesta</p>
+                        <p>Montar Cesta</p>
                     </a>
                 </li>
                 <li>

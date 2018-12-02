@@ -6,8 +6,7 @@
       </div>
     </div>
     <div class="row" position="center">
-       <form  method="post" action="<?= base_url()?>Produtor/salvar"> 
-
+       <form  method="post" action="<?= base_url()?>Admin/salvarProdutor">
           <div class="col-md-10 col-md-offset-2">
             <div class="col-sm-12 form-group">
                 <input class="form-control" id="nome" name="nome" placeholder="Nome" type="text" required>

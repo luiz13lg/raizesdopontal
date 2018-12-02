@@ -18,7 +18,7 @@
               <input class="form-control" id="nome" name="nome" placeholder="Nome do Produto" type="text" required>
             </div>
             <div class="col-sm-6 form-group">
-              <select class="form-control">
+              <select class="form-control" name='tipo' id='tipo'>
                 <option value="frutas">Fruta</option>
                 <option value="legumes">Legume</option>
                 <option value="verdura">Verdura</option>
