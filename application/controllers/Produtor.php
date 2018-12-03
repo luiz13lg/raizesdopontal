@@ -18,12 +18,19 @@
 
         public function index(){
             $this->load->model('produto_model');
-            $resultado = $this->produto_model->recupera($_SESSION['idProdutor']);
+            $dados['resultado'] = $this->produto_model->recupera($_SESSION['idProdutor']);
+            
             $this->load->model('cesta_model');
-            $resultadoCesta = $this->cesta_model->teste();
+            $dados['cestaGrande'] = $this->cesta_model->teste('grande');
+            
+            $this->load->model('cesta_model');
+            $dados['cestaPequena'] = $this->cesta_model->teste('pequena');
+            
+            $this->load->model('cliente_model');
+            $dados['resultadoReserva'] = $this->cliente_model->teste();
 
             $this->load->view('headerDashboardProdutor');
-            $this->load->view('indexDashboardProdutor', array('resultado' => $resultado, 'resultadoCesta' => $resultadoCesta));
+            $this->load->view('indexDashboardProdutor', $dados);
             $this->load->view('footerDashboard');
 
         }

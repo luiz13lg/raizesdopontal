@@ -42,38 +42,50 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                <h3 style="color: #B22222">Cestas</h3>
+                
+                <h3 style="color: #B22222">Cesta Grande</h3>
                     <div class="card">
                         <div class="card-body">
-                            <!-- Tabela de Funcionarios ativos -->
                             <table class="table table-striped table-condensed table-datatable">
                               <thead>
                               <tr>
-                                  <!-- <th>Quantidade</th> -->
-                                  <th>Tamanho</th>
-                                  <th>Quantidade</th>  
-                                  <th>Legumes</th> 
-                                  <th>Frutas</th>
-                                  <th>Verduras</th>
-                                  <th>Raizes</th>                         
+                                  <th>Produto</th> 
+                                  <th>Qtd Produto</th>
                               </tr>
                               </thead> 
                               <tbody>
-                                  <?php foreach ($resultadoCesta as $key => $value) { ?>
+                                <?php foreach ($cestaGrande as $key => $value) { ?>
                                   <tr>
-                                  <td><?= $value->tipoCesta ?></td>
-                                  <td><?= $value->qtdCesta ?></td>
-                                  <td><?= $value->legumesCesta ?></td>
-                                  <td><?= $value->frutasCesta ?></td>
-                                  <td><?= $value->verdurasCesta ?></td>
-                                  <td><?= $value->raizesCesta ?></td>
+                                  <td><?= $value->nomeProduto?></td>
+                                  <td><?= $value->qtdProdutoCesta?></td>
                                   </tr>
                                   <?php } ?>
-
-                              </tbody>  
-                            </table>
+                                </tbody>  
+                              </table>
                         </div>
-                     </div>
+                      </div>
+
+                    <h3 style="color: #B22222">Cesta Pequena</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-striped table-condensed table-datatable">
+                              <thead>
+                              <tr>
+                                  <th>Produto</th> 
+                                  <th>Qtd Produto</th>                   
+                              </tr>
+                              </thead> 
+                              <tbody>
+                                  <?php foreach ($cestaPequena as $key => $value) { ?>
+                                  <tr>
+                                  <td><?= $value->nomeProduto?></td>
+                                  <td><?= $value->qtdProdutoCesta?></td>
+                                  </tr>
+                                  <?php } ?>
+                                </tbody>  
+                              </table>
+                        </div>
+                      </div>
 
                     <h3 style="color: #B22222">Seus Produtos</h3>
                     <div class="card">

@@ -4,7 +4,6 @@
 
 <body>
 
-  <!-- <div class="main-panel"> -->
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -40,95 +39,98 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                  <h3 style="color: #B22222">Cestas</h3>
+                <h3 style="color: #B22222">Cesta Grande</h3>
                     <div class="card">
                         <div class="card-body">
-                            
-                            <!-- Tabela de Funcionarios ativos -->
                             <table class="table table-striped table-condensed table-datatable">
                               <thead>
                               <tr>
-                                  <!-- <th>Quantidade</th> -->
-                                  <th>Tamanho</th>
-                                  <th>Quantidade</th>  
-                                  <th>Legumes</th> 
-                                  <th>Frutas</th>
-                                  <th>Verduras</th>
-                                  <th>Raizes</th>                                        
+                                  <th>Produto</th> 
+                                  <th>Qtd Produto</th>
                               </tr>
                               </thead> 
                               <tbody>
-                                  <?php foreach ($resultadoCesta as $key => $value) { ?>
+                                <?php foreach ($cestaGrande as $key => $value) { ?>
                                   <tr>
-                                  <td><?= $value->tipoCesta ?></td>
-                                  <td><?= $value->qtdCesta ?></td>
-                                  <td><?= $value->legumesCesta ?></td>
-                                  <td><?= $value->frutasCesta ?></td>
-                                  <td><?= $value->verdurasCesta ?></td>
-                                  <td><?= $value->raizesCesta ?></td>
-                                  <td>
-                                    <a class="btn btn-sm btn-success" href="<?= base_url('Cliente/reservarCesta/'.$value->tipoCesta) ?>">Fazer Pedido</a>
-                                  </td>
+                                  <td><?= $value->nomeProduto?></td>
+                                  <td><?= $value->qtdProdutoCesta?></td>
+                                  </tr>
+                                  <?php } ?>
+                                </tbody>  
+                              </table>
+                        </div>
+                      </div>
+                    
+                    <div style="text-align:center">
+                        <a class="btn btn-sm btn-success" href="<?= base_url('Cliente/reservarCestaGrande/')?>">
+                            Reservar
+                        </a>
+                    </div>
+
+                    <h3 style="color: #B22222">Cesta Pequena</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-striped table-condensed table-datatable">
+                              <thead>
+                              <tr>
+                                  <th>Produto</th> 
+                                  <th>Qtd Produto</th>                   
+                              </tr>
+                              </thead> 
+                              <tbody>
+                                  <?php foreach ($cestaPequena as $key => $value) { ?>
+                                  <tr>
+                                  <td><?= $value->nomeProduto?></td>
+                                  <td><?= $value->qtdProdutoCesta?></td>
+                                  </tr>
+                                  <?php } ?>
+                                </tbody>  
+                              </table>
+                        </div>
+                      </div>
+                    <div style="text-align:center">
+                        <a class="btn btn-sm btn-success" href="<?= base_url('Cliente/reservarCestaPequena/')?>">
+                            Reservar
+                        </a>
+                    </div>
+                    
+                    <h3 style="color: #B22222">Produtos Disponíveis</h3>
+                          <div class="card">
+                            <div class="card-body">
+
+                              <table class="table table-striped table-condensed table-datatable">
+                                <thead>
+                                  <tr>
+                                    <th>Produtor</th>
+                                    <th>Nome</th>
+                                    <th>Descrição</th> 
+                                    <th>Quantidade</th>
+                                    <th>Preço</th>                                      
+                                  </tr>
+                                </thead> 
+                                <tbody>
+                                  <?php foreach ($resultado as $key => $value) { ?>
+                                  <tr>
+                                    <td><?= $value->nomeUsuario ?></td>
+                                    <td><?= $value->nomeProduto ?></td>
+                                    <td><?= $value->descricaoProduto ?></td>
+                                    <td><?= $value->qtdProduto ?></td>
+                                    <td><?= $value->valorProduto ?></td>
                                   </tr>
                                   <?php } ?>
 
-                              </tbody>  
-                            </table>
-                        </div>
-                     </div>
-
-                    <!-- <h3 style="color: black">Comprar Cesta</h3>
-                    <div class="content" style="width: 40%">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <form action="<?= base_url('Cliente/reservarCesta') ?>" method="POST">
-                          <div class="col-md-6">
-                            <select class="form-control" name="tipo">
-                              <option value="grande">Grande</option>
-                              <option value="pequena">Pequena</option>
-                            </select>
+                                </tbody>  
+                              </table>
+                            </div>
                           </div>
-                          <div class="col-md-6 form-group">
-                            <button class="btn pull-right btn-success">Fazer Pedido</button>
-                          </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div> -->
-                    
-                    <h3 style="color: #B22222">Produtos</h3>
-                    <div class="card">
-                      <div class="card-body">
-                          
-                          <!-- Tabela de Funcionarios ativos -->
-                          <table class="table table-striped table-condensed table-datatable">
-                            <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Descrição</th> 
-                                <th>Quantidade</th>
-                                <th>Preço</th>                                          
-                            </tr>
-                            </thead> 
-                            <tbody>
-                                <?php foreach ($resultado as $key => $value) { ?>
-                                <tr>
-                                <td><?= $value->nomeProduto ?></td>
-                                <td><?= $value->descricaoProduto ?></td>
-                                <td><?= $value->qtdProduto ?></td>
-                                <td><?= $value->valorProduto ?></td>
-                                </tr>
-                                <?php } ?>
-
-                            </tbody>  
-                          </table>
-                      </div>
                 </div>
                 </div>
             </div>
         </div>
 
-        <!--   Core JS Files   -->
+
+
+    <!--   Core JS Files   -->
     <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
     <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
@@ -147,7 +149,9 @@
     <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
     <script src="assets/js/demo.js"></script>
 
+
     <script type="text/javascript">
+    
         $(document).ready(function(){
 
             demo.initChartist();

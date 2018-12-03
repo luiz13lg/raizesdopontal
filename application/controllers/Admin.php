@@ -15,7 +15,10 @@ class Admin extends CI_Controller {
 		$dados['resultado'] = $this->produto_model->teste();
 		
 		$this->load->model('cesta_model');
-		$dados['resultadoCesta'] = $this->cesta_model->teste();
+		$dados['cestaGrande'] = $this->cesta_model->teste('grande');
+		
+		$this->load->model('cesta_model');
+		$dados['cestaPequena'] = $this->cesta_model->teste('pequena');
 		
 		$this->load->model('cliente_model');
 		$dados['resultadoReserva'] = $this->cliente_model->teste();
@@ -133,9 +136,19 @@ class Admin extends CI_Controller {
 			
 			$this->load->model('cesta_model');
 			$this->cesta_model->addCesta($cesta);
-			
+
 			redirect('Admin/cadastroCesta');
 		}
+	}
+
+	public function remProduto(){
+		$idProduto = $_GET['idProduto'];
+		$tipoCesta = $_GET['tipo'];
+
+		$this->load->model('cesta_model');
+		$this->cesta_model->remProduto($idProduto, $tipoCesta);
+
+		redirect('Admin/');
 	}
 
 }

@@ -34,8 +34,8 @@
                   <td><?= $value->nomeProduto ?></td>
                   <!-- <td><?= $value->descricaoProduto ?></td> -->
                   <td><?= $value->qtdProduto ?></td>
-                  <td>                   
-                    <input class="form-control" style="width:100px" id="qtdCesta<?=$value->idProduto?>" name="qtdCesta" type="text" placeholder="0">
+                  <td>
+                    <input type="number" class="form-control" style="width:100px" id="qtdCesta<?=$value->idProduto?>" name="qtdCesta" min = '1' max='<?=$value->qtdProduto?>' placeholder="0">
                   </td>
                   <td>
                     <select id="descricao<?=$value->idProduto?>" name="descricao" class="form-control">
@@ -63,16 +63,21 @@
         function addCesta(idProduto){
           var linha = 'qtdCesta'.concat(idProduto);
           var qtdProduto = document.getElementById(linha).value;
+          
+          if(qtdProduto < 0) 
+            return;
+          if(qtdProduto > valores[0].qtdProduto) 
+            return;
 
           linha = 'descricao'.concat(idProduto);
           var tipoCesta = document.getElementById(linha).value;
 
-          console.log(idProduto);
-          console.log(qtdProduto);
-          console.log(tipoCesta);
+          // console.log(idProduto);
+          // console.log(qtdProduto);
+          // console.log(tipoCesta);
 
-          var url = window.location.host;
-          console.log(url);
+          //var url = window.location.host;
+          //console.log(url);
           location.href = ('/raizesdopontal/Admin/addCesta?idProduto='+idProduto+'&qtdProduto='+qtdProduto+'&tipoCesta='+tipoCesta);
         }
       </script>

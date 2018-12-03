@@ -4,11 +4,16 @@
             return $this->db->insert("cesta", $cesta);
         }
 
-        public function teste(){
+        public function reservarCesta($reserva){
+            return $this->db->insert("reserva",$reserva);
+        }
+
+        public function teste($tamanho){
             $this->db->select('*');
             $this->db->from('tbl_cesta');
+            $this->db->where('tipoCesta',$tamanho);
             $this->db->join('Produto','tbl_cesta.idProduto = Produto.idProduto');
-
+            
             return $this->db->get()->result();
         }
 
@@ -30,6 +35,15 @@
                 $procedure = 'CALL atualizaQtdPedidoCesta(?, ?, ?)';
                 return $this->db->query($procedure,array('qtd'=>$cesta['qtdProdutoCesta'],'id'=>$existente[0]->idProduto, 'cesta'=>$existente[0]->tipoCesta));
             }else return $this->db->insert("tbl_cesta", $cesta);
+        }
+
+        public function remProduto($idProduto, $tipoCesta){
+            $this->db->select('*');
+            $this->db->from('tbl_cesta');
+            $this->db->where('tipoCesta', $tipoCesta);
+            $this->db->where('idProduto', $idProduto);
+
+            return $this->db->delete('tbl_cesta');
         }
     }
 ?>

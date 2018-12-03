@@ -39,22 +39,56 @@ class Cliente extends CI_Controller {
 
 	public function index(){
 		$this->load->model('produto_model');
-		$resultado = $this->produto_model->teste();
+		// $resultado = $this->produto_model->teste();
+		// $this->load->model('cesta_model');
+		// $resultadoCesta = $this->cesta_model->teste();
+		$this->load->model('produto_model');
+		$dados['resultado'] = $this->produto_model->teste();
+
 		$this->load->model('cesta_model');
-		$resultadoCesta = $this->cesta_model->teste();
+		$dados['cestaGrande'] = $this->cesta_model->teste('grande');
+		
+		$this->load->model('cesta_model');
+		$dados['cestaPequena'] = $this->cesta_model->teste('pequena');
 
 		$this->load->view('headerDashboardCliente');
-		$this->load->view('indexDashboardCliente', array('resultado' => $resultado, 'resultadoCesta' => $resultadoCesta));
+		$this->load->view('indexDashboardCliente', $dados);
 		$this->load->view('footerDashboard');
 	}
 
-	public function reservarCesta($tipo){
-		
-		$this->load->model('cliente_model');
-		$this->cliente_model->reservarCesta($tipo,$_SESSION['idCliente']);
+	public function reservarCestaGrande(){
+		$idUsuario = $_SESSION['idCliente'];
+		$this->load->model('cesta_model');
 
-		redirect('Cliente/index');
+		$tipo = array(
+			'id_cliente'=>$idUsuario,
+			'tipoCesta'=>'grande'
+		);
+
+		$this->cesta_model->reservarCesta($tipo);
+		redirect('Cliente/');
 	}
+
+	public function reservarCestaPequena(){
+		$idUsuario = $_SESSION['idCliente'];
+		$this->load->model('cesta_model');
+
+		$tipo = array(
+			'id_cliente'=>$idUsuario,
+			'tipoCesta'=>'pequena'
+		);
+
+		$this->cesta_model->reservarCesta($tipo);
+		redirect('Cliente/');
+	}
+
+	// public function reservarCesta($tipo){
+		
+	// 	$this->load->model('cliente_model');
+	// 	$this->cliente_model->reservarCesta($tipo,$_SESSION['idCliente']);
+
+	// 	redirect('Cliente/index');
+	// }
 
 	public function logout(){
 		session_start();

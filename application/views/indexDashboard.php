@@ -39,39 +39,62 @@ $logado = $_SESSION['nome'];
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <h3 style="color: #B22222">Itens Cesta</h3>
+                    <h3 style="color: #B22222">Cesta Grande</h3>
                     <div class="card">
                         <div class="card-body">
-                            
-                            <!-- Tabela de Funcionarios ativos -->
                             <table class="table table-striped table-condensed table-datatable">
                               <thead>
                               <tr>
-                                  <!-- <th>Quantidade</th> -->
-                                  <th>Tamanho Cesta</th>
                                   <th>Produto</th> 
                                   <th>Qtd Produto</th>
                                   <th></th>                           
                               </tr>
                               </thead> 
                               <tbody>
-                                  <?php foreach ($resultadoCesta as $key => $value) { ?>
+                                <?php foreach ($cestaGrande as $key => $value) { ?>
                                   <tr>
-                                  <td><?= $value->tipoCesta?></td>
                                   <td><?= $value->nomeProduto?></td>
                                   <td><?= $value->qtdProdutoCesta?></td>
                                   <td>
-                                    <a class="btn btn-sm btn-danger" href="<?php echo base_url('Admin/removerCesta/'.$value->tipoCesta) ?>">
+                                    <a class="btn btn-sm btn-danger" onClick=removeProdutoGrande(<?=$value->idProduto?>) href="#">
                                         Remover
                                     </a>
                                   </td>
                                   </tr>
                                   <?php } ?>
-
                                 </tbody>  
                               </table>
-                            </div>
-                          </div>
+                        </div>
+                      </div>
+
+                    <h3 style="color: #B22222">Cesta Pequena</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-striped table-condensed table-datatable">
+                              <thead>
+                              <tr>
+                                  <th>Produto</th> 
+                                  <th>Qtd Produto</th>
+                                  <th></th>                           
+                              </tr>
+                              </thead> 
+                              <tbody>
+                                  <?php foreach ($cestaPequena as $key => $value) { ?>
+                                  <tr>
+                                  <td><?= $value->nomeProduto?></td>
+                                  <td><?= $value->qtdProdutoCesta?></td>
+                                  <td>
+                                    <a class="btn btn-sm btn-danger" onClick=removeProdutoPequena(<?=$value->idProduto?>) href="#">
+                                      Remover
+                                    </a>
+                                  </td>
+                                  </tr>
+                                  <?php } ?>
+                                </tbody>  
+                              </table>
+                        </div>
+                      </div>
+
 
                           <h3 style="color: #B22222">Produtos Disponíveis</h3>
                           <div class="card">
@@ -86,7 +109,7 @@ $logado = $_SESSION['nome'];
                                     <th>Descrição</th> 
                                     <th>Quantidade</th>
                                     <th>Preço</th>
-                                    <th>Produtor</th>                                          
+                                    <th></th>                                          
                                   </tr>
                                 </thead> 
                                 <tbody>
@@ -109,10 +132,6 @@ $logado = $_SESSION['nome'];
                               </table>
                             </div>
                           </div>
-
-
-
-
 
                           <h3 style="color: #B22222">Reservas</h3>
                           <div class="card">
@@ -145,6 +164,23 @@ $logado = $_SESSION['nome'];
                         </div>
                       </div>
                     </div>
+
+                    <script>
+
+                      function removeProdutoPequena(idProduto){
+                        //console.log(idProduto);
+                        // '<?=base_url()?>'+
+                        location.href = ('/raizesdopontal/Admin/remProduto?idProduto='+idProduto+'&tipo=pequena');
+                      }
+
+                      function removeProdutoGrande(idProduto){
+                        //console.log(idProduto);
+                        // '<?=base_url()?>'+
+                        location.href = ('/raizesdopontal/Admin/remProduto?idProduto='+idProduto+'&tipo=grande');
+                      }
+
+                    </script>
+
 
                     <!--   Core JS Files   -->
                     <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
