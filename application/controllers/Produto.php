@@ -37,7 +37,7 @@ class Produto extends CI_Controller {
 			$this->session->set_flashdata('mensagem', "Sucesso!");
 			$this->session->set_flashdata('color', "danger");
 		}
-		
+
 		if($_SESSION['tipoUsuario'] == 0)
 			redirect('Admin/cadastroProduto');
 		else redirect('Produtor/cadastroProduto');

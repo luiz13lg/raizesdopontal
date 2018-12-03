@@ -44,7 +44,7 @@
           </div>
           <div class="row">
             <div class="col-sm-12 form-group">
-              <input type="text" name="descricao" class="form-control" id="descricao" placeholder="Descrição" required>
+              <input type="text" name="descricao" class="form-control" id="descricao" placeholder="Descrição">
             </div>
           </div>
           <div class="row">
