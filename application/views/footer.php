@@ -1,6 +1,6 @@
 	<footer class="rodape">
 		<div>
-			<h4>Desenvolvido por: Giulha Campos de Oliveira e Lulu Guilherme Thomaz</h4>
+			<h4>Desenvolvido por: Giulia & Luiz</h4>
 		</div>
 	</footer>
 

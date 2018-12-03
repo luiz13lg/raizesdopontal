@@ -39,7 +39,7 @@ $logado = $_SESSION['nome'];
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <h3 style="color: #B22222">Cestas Disponíveis</h3>
+                    <h3 style="color: #B22222">Itens Cesta</h3>
                     <div class="card">
                         <div class="card-body">
                             
@@ -48,24 +48,18 @@ $logado = $_SESSION['nome'];
                               <thead>
                               <tr>
                                   <!-- <th>Quantidade</th> -->
-                                  <th>Tamanho</th>
-                                  <th>Quantidade</th>  
-                                  <th>Legumes</th> 
-                                  <th>Frutas</th>
-                                  <th>Verduras</th>
-                                  <th>Raizes</th>
+                                  <th>Tamanho Cesta</th>
+                                  <th>Produto</th> 
+                                  <th>Qtd Produto</th>
                                   <th></th>                           
                               </tr>
                               </thead> 
                               <tbody>
                                   <?php foreach ($resultadoCesta as $key => $value) { ?>
                                   <tr>
-                                  <td><?= $value->tipoCesta ?></td>
-                                  <td><?= $value->qtdCesta ?></td>
-                                  <td><?= $value->legumesCesta ?></td>
-                                  <td><?= $value->frutasCesta ?></td>
-                                  <td><?= $value->verdurasCesta ?></td>
-                                  <td><?= $value->raizesCesta ?></td>
+                                  <td><?= $value->tipoCesta?></td>
+                                  <td><?= $value->nomeProduto?></td>
+                                  <td><?= $value->qtdProdutoCesta?></td>
                                   <td>
                                     <a class="btn btn-sm btn-danger" href="<?php echo base_url('Admin/removerCesta/'.$value->tipoCesta) ?>">
                                         Remover

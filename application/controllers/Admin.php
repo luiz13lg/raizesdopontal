@@ -118,11 +118,24 @@ class Admin extends CI_Controller {
 	}
 
 	public function addCesta(){
-		$id = $_GET['tipoCesta'];
-		$ud = $_GET['ud'];
-		echo $id;
-		echo $ud;
-		die();
+		$idProduto = $_GET['idProduto'];
+		$tipoCesta = $_GET['tipoCesta'];
+		$qtdProduto = $_GET['qtdProduto'];
+		
+		if(empty($qtdProduto))	//caso a quantidade de itens tenha sido vazia
+			redirect('Admin/cadastroCesta');
+		else{
+			$cesta = array(
+				'idProduto' => $idProduto,
+				'tipoCesta' => $tipoCesta,
+				'qtdProdutoCesta' =>$qtdProduto
+			);
+			
+			$this->load->model('cesta_model');
+			$this->cesta_model->addCesta($cesta);
+			
+			redirect('Admin/cadastroCesta');
+		}
 	}
 
 }

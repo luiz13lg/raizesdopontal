@@ -35,17 +35,17 @@
                   <!-- <td><?= $value->descricaoProduto ?></td> -->
                   <td><?= $value->qtdProduto ?></td>
                   <td>                   
-                    <input class="form-control" style="width:100px" id="qtdCesta" name="qtdCesta" type="text">
+                    <input class="form-control" style="width:100px" id="qtdCesta<?=$value->idProduto?>" name="qtdCesta" type="text" placeholder="0">
                   </td>
                   <td>
-                    <select name="descricao" class="form-control">
-                      <option id="descricao" name="descricao" value="grande">Grande</option>
-                      <option id="descricao" name="descricao" value="pequena">Pequena</option>
+                    <select id="descricao<?=$value->idProduto?>" name="descricao" class="form-control">
+                      <option  name="descricao" value="grande">Grande</option>
+                      <option  name="descricao" value="pequena">Pequena</option>
                     </select>
                   </td>
                   <td></td>
                   <td>
-                    <a class="btn btn-sm btn-success" href="<?php echo base_url('Admin/addCesta/.<?tipoCesta=descricao&ud=20')?>">
+                    <a class="btn btn-sm btn-success" onClick=addCesta(<?= $value->idProduto?>) href="#">
                       Adicionar
                     </a>
                   </td>
@@ -56,6 +56,27 @@
             </table>
           </div>
         </div>
+
+      <script>
+        var valores = <?= json_encode($resultado); ?>;
+        // console.log(valores);
+        function addCesta(idProduto){
+          var linha = 'qtdCesta'.concat(idProduto);
+          var qtdProduto = document.getElementById(linha).value;
+
+          linha = 'descricao'.concat(idProduto);
+          var tipoCesta = document.getElementById(linha).value;
+
+          console.log(idProduto);
+          console.log(qtdProduto);
+          console.log(tipoCesta);
+
+          var url = window.location.host;
+          console.log(url);
+          location.href = ('/raizesdopontal/Admin/addCesta?idProduto='+idProduto+'&qtdProduto='+qtdProduto+'&tipoCesta='+tipoCesta);
+        }
+      </script>
+
 
       <!-- <form  method="post" action="<?= base_url()?>Cesta/nova">
         <div class="col-md-10 col-md-offset-2">
