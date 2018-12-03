@@ -1,5 +1,7 @@
   <div class="container">
-    <h2> Cadastro de Produtor </h2>
+    <div class="col-md-10 col-md-offset-2">
+      <h2> Cadastro de Produtor </h2>
+    </div>
     <div class="col-md-10 col-md-offset-2">
       <div class="alert alert-<?= $this->session->color ?>" role="alert">
           <?= $this->session->mensagem ?>

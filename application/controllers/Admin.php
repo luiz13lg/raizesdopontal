@@ -32,8 +32,11 @@ class Admin extends CI_Controller {
 	}
 
 	public function cadastroCesta(){
+		$this->load->model('produto_model');
+		$dados['resultado'] = $this->produto_model->teste();
+
 		$this->load->view('headerDashboard');
-		$this->load->view('cadastroCesta');
+		$this->load->view('cadastroCesta', $dados);
 		$this->load->view('footerDashboard');
 	}
 
@@ -112,6 +115,14 @@ class Admin extends CI_Controller {
 		// $this->load->view('headerDashboard');
 		// $this->load->view('cadastroprodutor');
 		// $this->load->view('footerDashboard');
+	}
+
+	public function addCesta(){
+		$id = $_GET['tipoCesta'];
+		$ud = $_GET['ud'];
+		echo $id;
+		echo $ud;
+		die();
 	}
 
 }
